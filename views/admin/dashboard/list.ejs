@@ -1,0 +1,86 @@
+<!-- START @PAGE CONTENT -->
+<section id="page-content">
+
+    <!-- Start page header -->
+    <div class="header-content">
+        <h2><i class="fa fa-home"></i>Dashboard <span>All active, and upcoming orders</span></h2>
+    </div><!-- /.header-content -->
+    <!--/ End page header -->
+
+    <!-- Start body content -->
+    <div class="body-content animated fadeIn">
+
+        <div class="row">
+            <div class="col-md-3 col-md-offset-9">
+
+                <!-- Start mini stats social widget -->
+                <div class="row">
+                    <div class="col-md-12  col-xs-4 col-xs-override">
+                        <a class="btn btn-primary btn-lg btn-push btn-block" href="/admin/orders/add">New Order</a>
+                    </div>
+                </div><br>
+                <div class="clearfix"></div>
+
+                <!--/ End mini stats social widget -->
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+
+                <!-- Start sample table -->
+                <div class="table-responsive rounded mb-20">
+                    <table class="table table-striped table-theme">
+                        <thead>
+                        <tr>
+                            <th class="text-center border-right">Order ID</th>
+                            <th>Pickup Time</th>
+                            <th>Client</th>
+                            <th>Company</th>
+                            <th>Pick up Address</th>
+                            <th>Drop off Address</th>
+                            <th>Car</th>
+                            <th>Driver</th>
+                            <th>Status</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <% _.each(orders, function (order) { %>
+                            <tr>
+                                <td class="text-center border-right"><a href="/admin/order/<%= order.id %>">HD-<%= order.orderid %></a></td>
+                                <td><%= order.pickupdate %> <%= order.pickuptime %></td>
+                                <td><%= order.clientfname %> <%= order.clientlname %></td>
+                                <td><a href="/admin/company/<%= order.company.id %>"><%= order.company.title %></a></td>
+                                <td><%= order.pickuplocation %></td>
+                                <td><%= order.finaldestination %></td>
+                                <td><a href="/admin/car/<%= order.car.id %>"><%= order.car.regnr %></a></td>
+                                <td><a href="/admin/driver/<%= order.driver.id %>"><%= order.driver.fname %> <%= order.driver.lname %></a></td>
+                                <td>
+                                <% if(order.status == 'not started') { %>
+                                    <span class="badge">Not Started</span>
+                                    <% if(order.ordertime < Math.floor(Date.now() / 1000)) { %>
+                                        <span class="animate-pulse status-error label label-danger rounded">!</span>
+                                    <% } %>
+                                <% } if(order.status == 'in progress') { %>
+                                    <span class="badge badge-warning">In Progress</span>
+                                <% } if(order.status == 'did not show up') { %>
+                                    <span class="badge badge-danger">Did not show up</span>
+                                <% } %>
+                                </td>
+                            </tr>
+                        <% }) %>
+                        </tbody>
+                    </table>
+                </div><!-- /.table-responsive -->
+                <!--/ End sample table -->
+
+            </div>
+        </div><!-- /.row -->
+
+    </div><!-- /.body-content -->
+    <!--/ End body content -->
+
+
+
+</section><!-- /#page-content -->
+<!--/ END PAGE CONTENT -->

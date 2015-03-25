@@ -1,0 +1,77 @@
+<!-- START @PAGE CONTENT -->
+<section id="page-content">
+
+    <!-- Start page header -->
+    <div class="header-content">
+        <h2><i class="fa fa-book"></i>Orders <span>All past due orders</span></h2>
+    </div><!-- /.header-content -->
+    <!--/ End page header -->
+
+    <!-- Start body content -->
+    <div class="body-content animated fadeIn">
+
+        <div class="row">
+            <div class="col-md-12">
+                <!-- Start datatable using dom -->
+                <div class="panel rounded shadow">
+                    <div class="panel-heading">
+                        <div class="pull-left">
+                            <h3 class="panel-title">List of all orders</h3>
+                        </div>
+                        <div class="pull-right">
+                            <a href="/admin/orders/add" class="btn btn-success"><i class="fa fa-plus"></i> Add New Order</a>
+                            <a href="#" class="btn btn-info">EXPORT CSV</a>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div><!-- /.panel-heading -->
+                    <div class="panel-body">
+                    <!-- Start datatable -->
+                    <table id="datatable-dom" class="table table-striped table-success">
+                    <thead>
+                    <tr>
+                        <th data-hide="phone">Client</th>
+                        <th data-class="expand">Company</th>
+                        <th data-hide="phone">Start Point</th>
+                        <th data-hide="phone">End Point</th>
+                        <th data-hide="phone,tablet">Driver</th>
+                        <th data-hide="phone,tablet">Car</th>
+                        <th data-hide="phone,tablet">Status</th>
+                        <th data-hide="phone,tablet">Order ID</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <% _.each(orders, function (order) { %>
+                        <tr>
+                            <td><%= order.clientfname %> <%= order.clientlname %></td>
+                            <td><a href="/admin/company/<%= order.company.id %>"><%= order.company.title %></a></td>
+                            <td><%= order.pickuplocation %></td>
+                            <td><%= order.finaldestination %></td>
+                            <td><a href="/admin/driver/<%= order.driver.id %>"><%= order.driver.fname %> <%= order.driver.lname %></a></td>
+                            <td><a href="/admin/car/<%= order.car.id %>"><%= order.car.regnr %></a></td>
+                            <td>
+                            <% if(order.status == 'delivered') { %>
+                                <span class="badge badge-success">Delivered</span>
+                            <% } if(order.status == 'invoiced') { %>
+                                <span class="badge badge-default">Invoiced</span>
+                            <% } %>
+                            </td>
+                            <td><a href="/admin/order/<%= order.id %>">HD-<%= order.orderid %></a></td>
+                        </tr>
+                    <% }) %>
+                    </tbody>
+                    </table>
+                    <!--/ End datatable -->
+                    </div><!-- /.panel-body -->
+                </div><!-- /.panel -->
+                <!--/ End datatable using dom -->
+
+            </div><!-- /.col-md-12 -->
+        </div><!-- /.row -->
+
+    </div><!-- /.body-content -->
+    <!--/ End body content -->
+
+
+
+</section><!-- /#page-content -->
+<!--/ END PAGE CONTENT -->

@@ -1,0 +1,191 @@
+<!-- START @PAGE CONTENT -->
+<section id="page-content">
+
+    <!-- Start page header -->
+    <div class="header-content">
+        <h2><i class="fa fa-book"></i> Order <span>New Order</span></h2>
+    </div><!-- /.header-content -->
+    <!--/ End page header -->
+
+    <!-- Start body content -->
+    <div class="body-content animated fadeIn">
+
+        <div class="row">
+            <form action="/admin/orders/create/" class="form-horizontal form-bordered">
+            <div class="col-md-6">
+
+                <!-- Start input fields - horizontal form -->
+                <div class="panel rounded shadow">
+                    <div class="panel-heading">
+                        <div class="pull-left">
+                            <h3 class="panel-title">Order details</h3>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div><!-- /.panel-heading -->
+                    <div class="panel-body no-padding rounded-bottom">
+                            <div class="form-body">
+
+                            <div class="form-group">
+                            <label class="col-sm-3 control-label">Client Company</label>
+                            <div class="col-sm-9">
+                            <select name="company" data-placeholder="Choose a Company" class="chosen-select mb-15" tabindex="2">
+                            <% _.each(companies, function (company) { %>
+                                <option value="<%= company.id %>"><%= company.title %></option>
+                            <% }) %>
+                            </select>
+                            </div>
+                            </div><!-- /.form-group -->
+
+
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">Client Reference number</label>
+                                    <div class="col-sm-9">
+                                        <input name="referencenr" class="form-control" type="text">
+                                    </div>
+                                </div><!-- /.form-group -->
+
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">Driver</label>
+                                    <div class="col-sm-9">
+                                    <select name="driver" data-placeholder="Choose a Driver" class="chosen-select mb-15" tabindex="2">
+                                    <% _.each(drivers, function (driver) { %>
+                                        <option value="<%= driver.id %>"><%= driver.fname %> <%= driver.lname %></option>
+                                    <% }) %>
+                                    </select>
+                                    </div>
+                            </div><!-- /.form-group -->
+
+                            <div class="form-group">
+                                    <label class="col-sm-3 control-label">Car (reg number)</label>
+                                    <div class="col-sm-9">
+                                    <select name="car" data-placeholder="Choose a Car" class="chosen-select mb-15" tabindex="2">
+                                    <% _.each(cars, function (car) { %>
+                                        <option value="<%= car.id %>"><%= car.regnr %> - <%= car.model %></option>
+                                    <% }) %>
+                                    </select>
+                                    </div>
+                            </div><!-- /.form-group -->
+
+
+
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">Pickup Location</label>
+                                    <div class="col-sm-9">
+                                        <input name="pickuplocation" class="form-control" type="text">
+                                    </div>
+                                </div><!-- /.form-group -->
+
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">Other Stops</label>
+                                    <div class="col-sm-9">
+                                        <input name="otherstops" type="text" value="" data-role="tagsinput" class="form-control" placeholder="Type address and hit enter" />
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">Final Destination</label>
+                                    <div class="col-sm-9">
+                                        <input name="finaldestination" class="form-control" type="text">
+                                    </div>
+                                </div><!-- /.form-group -->
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">Pickup date</label>
+                                    <div class="col-sm-9">
+                                        <input name="pickupdate" type="text" class="form-control" value="" data-date-format="yyyy/mm/dd" id="dp2">
+                                    </div>
+                                </div><!-- /.form-group -->
+
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">Pickup time</label>
+                                    <div class="col-sm-9">
+                                        <input name="pickuptime" class="form-control" type="text">
+                                    </div>
+                                </div><!-- /.form-group -->
+
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">Flight Number</label>
+                                    <div class="col-sm-9">
+                                        <input name="flightnumber" class="form-control" type="text">
+                                    </div>
+                                </div><!-- /.form-group -->
+
+
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">Extra notes</label>
+                                    <div class="col-sm-9">
+                                        <textarea name="extranotes" class="form-control" rows="5"></textarea>
+                                    </div>
+                                </div>
+
+                            </div><!-- /.form-body -->
+                    </div><!-- /.panel-body -->
+                </div><!-- /.panel -->
+                <!--/ End input fields - horizontal form -->
+
+            </div><!-- /.col-md-6 -->
+
+            <div class="col-md-6">
+
+                <!-- Start input fields - horizontal form -->
+                <div class="panel rounded shadow">
+                    <div class="panel-heading">
+                        <div class="pull-left">
+                            <h3 class="panel-title">Client Details</h3>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div><!-- /.panel-heading -->
+                    <div class="panel-body no-padding rounded-bottom">
+                            <div class="form-body">
+
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">First Name</label>
+                                    <div class="col-sm-9">
+                                        <input name="clientfname" class="form-control" type="text">
+                                    </div>
+                                </div><!-- /.form-group -->
+
+
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">Last Name</label>
+                                    <div class="col-sm-9">
+                                        <input name="clientlname" class="form-control" type="text">
+                                    </div>
+                                </div><!-- /.form-group -->
+
+
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">Email</label>
+                                    <div class="col-sm-9">
+                                        <input name="clientemail" class="form-control" type="text">
+                                    </div>
+                                </div><!-- /.form-group -->
+
+
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">Phone</label>
+                                    <div class="col-sm-9">
+                                        <input name="clientphone" class="form-control" type="text">
+                                    </div>
+                                </div><!-- /.form-group -->
+
+                            </div><!-- /.form-body -->
+                            <div class="form-footer">
+                                <div class="pull-right">
+                                    <input class="btn btn-success" type="submit" value="Submit" />
+                                </div>
+                                <div class="clearfix"></div>
+                            </div><!-- /.form-footer -->
+                    </div><!-- /.panel-body -->
+                </div><!-- /.panel -->
+                <!--/ End input fields - horizontal form -->
+
+            </div><!-- /.col-md-6 -->
+            </form>
+        </div><!-- /.row -->
+
+    </div><!-- /.body-content -->
+    <!--/ End body content -->
+
+</section><!-- /#page-content -->
+<!--/ END PAGE CONTENT -->

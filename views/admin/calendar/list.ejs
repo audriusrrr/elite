@@ -1,0 +1,91 @@
+<!-- START @PAGE CONTENT -->
+<section id="page-content">
+
+    <!-- Start page header -->
+    <div class="header-content">
+        <h2><i class="fa fa-calendar"></i>Calendar</h2>
+    </div><!-- /.header-content -->
+    <!--/ End page header -->
+
+        <!-- console.log(events) -->
+    <!-- Start body content -->
+    <div class="body-content animated fadeIn">
+        <div class="row">
+            <div class="col-md-9 col-sm-8">
+                <div class="calendar-toolbar">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-2 col-xs-2">
+                            <!-- Start offcanvas btn menu calendar:This menu will take position at the top of calendar (mobile only). -->
+                            <div class="btn-group hidden-lg hidden-md">
+                                <button type="button" class="btn btn-theme btn-sm dropdown-toggle" data-toggle="dropdown">
+                                    <i class="fa fa-bars fa-2x"></i>
+                                </button>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li>
+                                        <a href="#" data-calendar-nav="prev">Prev</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" data-calendar-nav="today">Today</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" data-calendar-nav="next">Next</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="hidden-sm hidden-xs">
+                                <button class="btn btn-theme btn-sm rounded" data-calendar-nav="prev"><i class="fa fa-angle-left"></i> Prev</button>
+                                <button class="btn btn-theme btn-sm rounded" data-calendar-nav="today">Today</button>
+                                <button class="btn btn-theme btn-sm rounded" data-calendar-nav="next">Next <i class="fa fa-angle-right"></i></button>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-8 col-xs-8">
+                            <div class="page-header no-border no-margin no-padding"><h4 class="no-border no-margin no-padding text-center text-capitalize">&nbsp;</h4></div>
+                        </div>
+                        <div class="col-md-5 col-sm-2 col-xs-2">
+                            <!-- Start offcanvas btn menu calendar: This menu will take position at the top of calendar (mobile only). -->
+                            <div class="btn-group calendar-menu-mobile pull-right hidden-lg hidden-md">
+                                <button type="button" class="btn btn-theme btn-sm dropdown-toggle" data-toggle="dropdown">
+                                    <i class="fa fa-bars fa-2x"></i>
+                                </button>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li>
+                                        <a href="#" data-calendar-view="year">Prev</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" data-calendar-view="month">Month</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" data-calendar-view="week">Week</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" data-calendar-view="day">Day</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="pull-right hidden-sm hidden-xs">
+                                <button class="btn btn-theme btn-sm rounded" data-calendar-view="year">Year</button>
+                                <button class="btn btn-theme btn-sm  rounded" data-calendar-view="month">Month</button>
+                                <button class="btn btn-theme btn-sm rounded" data-calendar-view="week">Week</button>
+                                <button class="btn btn-theme btn-sm active rounded" data-calendar-view="day">Day</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="calendar" class="rounded mb-20"></div>
+            </div>
+            <div class="col-md-3 col-sm-4">
+
+                <h4>Upcomming jobs today</h4>
+                <ul id="eventlist" class="nav nav-pills nav-stacked niceScroll"></ul>
+
+            </div>
+        </div><!-- /.row -->
+
+    </div><!-- /.body-content -->
+    <!--/ End body content -->
+
+    <!-- Start footer content -->
+    <!--/ End footer content -->
+
+</section><!-- /#page-content -->
+<!--/ END PAGE CONTENT -->

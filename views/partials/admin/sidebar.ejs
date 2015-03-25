@@ -1,0 +1,111 @@
+<aside id="sidebar-left" class="sidebar-circle">
+
+    <!-- Start left navigation - profile shortcut -->
+    <div class="sidebar-content">
+        <a href="#" class="close">&times;</a>
+        <div class="media">
+            <a class="pull-left has-notif avatar" href="page-profile.html">
+                <img src="<%- sails.getBaseurl() %>/global/img/avatar/50/1.png" alt="admin">
+                <!-- <i class="online"></i> -->
+            </a>
+            <div class="media-body">
+                <h4 class="media-heading">Hello, <span>Ann</span></h4>
+                <small>Elite Administrator</small>
+            </div>
+        </div>
+    </div><!-- /.sidebar-content -->
+    <!--/ End left navigation -  profile shortcut -->
+
+    <!-- Start left navigation - menu -->
+    <ul class="sidebar-menu">
+
+        <!-- Start navigation - dashboard -->
+        <li class="<% if (title === 'admin-Dashboard') { %>active<% } %>">
+            <a href="/admin/dashboard/">
+                <span class="icon"><i class="fa fa-home"></i></span>
+                <span class="text">Dashboard</span>
+            </a>
+        </li>
+        <!--/ End navigation - dashboard -->
+
+        <!-- Start navigation - statistics -->
+        <li class="<% if (title === 'admin-Calendar') { %>active<% } %>">
+            <a href="/admin/calendar/">
+                <span class="icon"><i class="fa fa-calendar"></i></span>
+                <span class="text">Calendar</span>
+            </a>
+        </li>
+        <!--/ End navigation - statistics -->
+
+        <!-- Start navigation - clients -->
+        <li class="<% if (title === 'admin-Clients') { %>active<% } %>">
+            <a href="/admin/companies/">
+                <span class="icon"><i class="fa fa-building"></i></span>
+                <span class="text">Companies</span>
+            </a>
+        </li>
+        <!--/ End navigation - clients -->
+
+        <!-- Start navigation - drivers -->
+        <li class="<% if (title === 'admin-Drivers') { %>active<% } %>">
+            <a href="/admin/drivers/">
+                <span class="icon"><i class="fa fa-car"></i></span>
+                <span class="text">Drivers</span>
+            </a>
+        </li>
+        <!--/ End navigation - drivers -->
+
+        <li class="<% if (title === 'admin-Cars') { %>active<% } %>">
+            <a href="/admin/cars/">
+                <span class="icon"><i class="fa fa-taxi"></i></span>
+                <span class="text">Cars</span>
+                <span class="selected"></span>
+            </a>
+        </li>
+        <!--/ End navigation - drivers -->
+
+
+        <!-- Start navigation - orders -->
+        <li class="<% if (title === 'admin-Orders') { %>active<% } %>">
+            <a href="/admin/orders/">
+                <span class="icon"><i class="fa fa-book"></i></span>
+                <span class="text">Orders</span>
+            </a>
+        </li>
+        <!--/ End navigation - orders -->
+
+        <!-- Start category ui kit-->
+        <li class="sidebar-category">
+            <span>Users</span>
+            <span class="pull-right"><i class="fa fa-magic"></i></span>
+        </li>
+        <!--/ End category ui kit-->
+
+        <!-- Start navigation - pages -->
+        <li class="submenu">
+            <a href="javascript:void(0);">
+                <span class="icon"><i class="fa fa-users"></i></span>
+                <span class="text">Register New User</span>
+                <span class="arrow"></span>
+            </a>
+            <ul>
+                <li><a href="register-admin.html">Register Admin</a></li>
+            </ul>
+        </li>
+        <!--/ End navigation - pages -->
+
+
+    </ul><!-- /.sidebar-menu -->
+    <!--/ End left navigation - menu -->
+
+    <!-- Start left navigation - footer -->
+    <div class="sidebar-footer hidden-xs hidden-sm hidden-md">
+        <a class="pull-left" href="#" data-toggle="tooltip" data-placement="top" data-title="Setting"><i class="fa fa-cog"></i></a>
+        <a id="fullscreen" class="pull-left" href="#" data-toggle="tooltip" data-placement="top" data-title="Fullscreen"><i class="fa fa-desktop"></i></a>
+        <a class="pull-left" href="page-lock-screen.html" data-toggle="tooltip" data-placement="top" data-title="Lock Screen"><i class="fa fa-lock"></i></a>
+        <a class="pull-left" href="page-signin.html" data-toggle="tooltip" data-placement="top" data-title="Logout"><i class="fa fa-power-off"></i></a>
+    </div><!-- /.sidebar-footer -->
+    <!--/ End left navigation - footer -->
+
+</aside><!-- /#sidebar-left -->
+<!--/ END SIDEBAR LEFT -->

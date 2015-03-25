@@ -1,0 +1,1423 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"json",
+				"jsonObja"
+			],
+			[
+				"jso",
+				"jsonObja"
+			],
+			[
+				"va",
+				"valuesArray"
+			],
+			[
+				"j",
+				"jsonObja"
+			],
+			[
+				"ev",
+				"eventsBrr"
+			],
+			[
+				"fn",
+				"function"
+			],
+			[
+				"or",
+				"orders"
+			],
+			[
+				"res",
+				"response"
+			],
+			[
+				"req",
+				"request"
+			],
+			[
+				"new",
+				"newDate"
+			],
+			[
+				"pic",
+				"pickuptime"
+			],
+			[
+				"com",
+				"company"
+			],
+			[
+				"cop",
+				"Company"
+			],
+			[
+				"re",
+				"return"
+			],
+			[
+				"fin",
+				"findOne"
+			],
+			[
+				"js",
+				"js"
+			],
+			[
+				"img",
+				"imgArr"
+			],
+			[
+				"im",
+				"Image"
+			],
+			[
+				"d",
+				"display"
+			],
+			[
+				"w",
+				"width"
+			],
+			[
+				"el",
+				"else"
+			],
+			[
+				"se",
+				"setTimeout"
+			],
+			[
+				"mar",
+				"margin-right"
+			],
+			[
+				"pa",
+				"padding-top"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"te",
+				"text-align"
+			],
+			[
+				"tex",
+				"text-transform"
+			],
+			[
+				"file",
+				"file_return"
+			],
+			[
+				"append",
+				"appendTo"
+			],
+			[
+				"photoFra",
+				"photoFrame2Rotation"
+			],
+			[
+				"obj",
+				"objid"
+			],
+			[
+				"data",
+				"dataString"
+			],
+			[
+				"e",
+				"event"
+			],
+			[
+				"it",
+				"itemcount"
+			],
+			[
+				"ele",
+				"draggable_elem"
+			],
+			[
+				"ima",
+				"image_data_base64"
+			],
+			[
+				"str_re",
+				"str_replace"
+			],
+			[
+				"che",
+				"checkCoords"
+			],
+			[
+				"rea",
+				"readURL"
+			],
+			[
+				"in",
+				"input"
+			],
+			[
+				"do",
+				"document"
+			],
+			[
+				"app",
+				"appendTo"
+			],
+			[
+				"dragg",
+				"draggable_elem"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"bo",
+				"border-bottom"
+			],
+			[
+				"20px",
+				"20px"
+			],
+			[
+				"sit",
+				"site-js"
+			],
+			[
+				"boots",
+				"bootstrap-js"
+			],
+			[
+				"m",
+				"mname"
+			],
+			[
+				"mon",
+				"month"
+			],
+			[
+				"singl",
+				"singles"
+			],
+			[
+				"pe",
+				"peidatArr"
+			],
+			[
+				"peid",
+				"peidatArr"
+			],
+			[
+				"pei",
+				"peidata"
+			],
+			[
+				"peida",
+				"peidatas"
+			],
+			[
+				"pie",
+				"piedata"
+			],
+			[
+				"tar",
+				"targetGapMessage"
+			],
+			[
+				"target",
+				"targetGap"
+			],
+			[
+				"inc",
+				"income"
+			],
+			[
+				"sta",
+				"startsIn"
+			],
+			[
+				"star",
+				"startDate"
+			],
+			[
+				"strto",
+				"strtotime"
+			],
+			[
+				"day",
+				"daysleft"
+			],
+			[
+				"badge",
+				"badge-success"
+			],
+			[
+				"alltime",
+				"alltimeall"
+			],
+			[
+				"bor",
+				"border-right"
+			],
+			[
+				"use",
+				"username"
+			],
+			[
+				"usernam",
+				"userName"
+			],
+			[
+				"na",
+				"name"
+			],
+			[
+				"un",
+				"uniqueNames"
+			],
+			[
+				"name",
+				"namesArray"
+			],
+			[
+				"time",
+				"timeArray"
+			],
+			[
+				"tim",
+				"timeArray"
+			],
+			[
+				"user",
+				"userName"
+			],
+			[
+				"for",
+				"foreach	foreach …"
+			],
+			[
+				"us",
+				"username"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"hour",
+				"hoursDecimal"
+			],
+			[
+				"ent",
+				"entryDuration"
+			],
+			[
+				"week",
+				"weekInSeconds"
+			],
+			[
+				"lis",
+				"list-style-type"
+			],
+			[
+				"print",
+				"print_r"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "views/admin/order/add.ejs",
+			"settings":
+			{
+				"buffer_size": 9822,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "api/models/Order.js",
+			"settings":
+			{
+				"buffer_size": 1867,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "assets/admin/js/pages/blankon.calendar.js",
+			"settings":
+			{
+				"buffer_size": 3348,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "assets/global/plugins/bootstrap-calendar/calendar-events-sample.json",
+			"settings":
+			{
+				"buffer_size": 2548,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "config/routes.js",
+			"settings":
+			{
+				"buffer_size": 4589,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "api/controllers/OrderController.js",
+			"settings":
+			{
+				"buffer_size": 2933,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/admin/calendar/list.ejs",
+			"settings":
+			{
+				"buffer_size": 5027,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "    <%\n        var eventsBrr = [];\n        var resultBrr = [];\n        var str = '{\"success\": 1, \"result\": [';\n        var valuesArray = [];\n        for (var i = events.length - 1; i >= 0; i--) {\n          var id    = events[i].id;\n          var title = 'HD-' + events[i].orderid;\n          var url   = '/admin/order/'+events[i].id;\n          var alass = 'event-success';\n          var start = events[i].ordertime * 1000;\n          var aend  = (start + 10000) * 1000;\n          str = str + '{\"id\":\"'+id+'\",\"title\": \"HD-'+title+'\",\"url\":\"'+url+'\",\"class\":\"event-warning\",\"start\":\"'+start+'\",\"end\":\"'+aend+'\"}';\n          btr = '{\"id\":\"'+id+'\",\"title\": \"HD-'+title+'\",\"url\":\"'+url+'\",\"class\":\"event-warning\",\"start\":\"'+start+'\",\"end\":\"'+aend+'\"}';\n          var options = {\n            'id'   : id,\n            'title': title,\n            'url'  : url,\n            'class': alass,\n            'start': start,\n            'end'  : aend\n          };\n          valuesArray.push(options);\n        };\n        str = str + ']}';\n        var objMap = {\"success\":1,\"result\" : valuesArray};\n        newstr = str;\n        var json = JSON.stringify(valuesArray);\n         %>\n         <div class=\"hidden jsonobj\" data-json=\"<%= json %>\"></div>",
+			"settings":
+			{
+				"buffer_size": 1228,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "tasks/pipeline.js",
+			"settings":
+			{
+				"buffer_size": 3890,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/partials/sidebar.ejs",
+			"settings":
+			{
+				"buffer_size": 4506,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 328.0,
+		"selected_items":
+		[
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"ht",
+				"Set Syntax: HTML"
+			],
+			[
+				"syn html",
+				"Set Syntax: HTML"
+			],
+			[
+				"syn ht",
+				"Set Syntax: HTML (Tcl)"
+			],
+			[
+				"synht",
+				"Set Syntax: HTML (Tcl)"
+			],
+			[
+				"push",
+				"Git: Push"
+			],
+			[
+				"Git: Quick Commit",
+				"Git: Quick Commit"
+			],
+			[
+				"git ",
+				"Git: Push"
+			],
+			[
+				"git pus",
+				"Git: Push"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"git qui",
+				"Git: Quick Commit"
+			],
+			[
+				"sy",
+				"Set Syntax: PHP"
+			],
+			[
+				"synta",
+				"Set Syntax: PHP"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 417.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+			"\"theme\": \"predawn-DEV.sublime-theme\"",
+			"theme\": \"predawn-DEV.sublime-theme",
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/audrius/Documents/projects/taxi",
+		"/home/audrius/Documents/projects/taxi/api",
+		"/home/audrius/Documents/projects/taxi/api/controllers",
+		"/home/audrius/Documents/projects/taxi/assets/global/plugins/bootstrap-calendar",
+		"/home/audrius/Documents/projects/taxi/assets/global/plugins/bootstrap-calendar/css",
+		"/home/audrius/Documents/projects/taxi/assets/global/plugins/bootstrap-calendar/js",
+		"/home/audrius/Documents/projects/taxi/assets/global/plugins/bootstrap-calendar/tmpls",
+		"/home/audrius/Documents/projects/taxi/tasks",
+		"/home/audrius/Documents/projects/taxi/views",
+		"/home/audrius/Documents/projects/taxi/views/admin",
+		"/home/audrius/Documents/projects/taxi/views/admin/calendar",
+		"/home/audrius/Documents/projects/taxi/views/admin/driver",
+		"/home/audrius/Documents/projects/taxi/views/admin/order",
+		"/home/audrius/Documents/projects/elite-chaupheur/HTML/HTML/roles",
+		"/home/audrius/Documents/projects/elite-chaupheur/HTML/HTML/roles/admin/html"
+	],
+	"file_history":
+	[
+		"/home/audrius/Documents/projects/onarach/THEME/onorach/functions/post-types/portfolio.php",
+		"/home/audrius/Documents/projects/taxi/api/controllers/CarController.js",
+		"/home/audrius/Documents/projects/taxi/api/controllers/InvoiceController.js",
+		"/home/audrius/Documents/projects/taxi/api/controllers/CompanyController.js",
+		"/home/audrius/Documents/projects/taxi/api/controllers/OrderController.js",
+		"/home/audrius/Documents/projects/taxi/assets/admin/css/custom.css",
+		"/home/audrius/Documents/projects/taxi/views/admin/driver/show.ejs",
+		"/home/audrius/Documents/projects/taxi/api/controllers/DriverController.js",
+		"/home/audrius/Documents/projects/taxi/views/admin/car/show.ejs",
+		"/home/audrius/Documents/projects/taxi/views/admin/order/show.ejs",
+		"/home/audrius/Documents/projects/taxi/views/admin/order/list.ejs",
+		"/home/audrius/Documents/projects/taxi/views/admin/company/show.ejs",
+		"/home/audrius/Documents/projects/taxi/tasks/pipeline.js",
+		"/home/audrius/Documents/projects/taxi/views/admin/calendar/list.ejs",
+		"/home/audrius/Documents/projects/elite-chaupheur/HTML/HTML/roles/admin/html/statistics.html",
+		"/home/audrius/Documents/projects/taxi/assets/admin/css/themes/black-and-white.theme.css",
+		"/home/audrius/Documents/projects/taxi/node_modules/sails/node_modules/ejs-locals/test/fixtures/blocks-layout.ejs",
+		"/home/audrius/Documents/projects/taxi/config/blueprints.js",
+		"/home/audrius/Documents/projects/elite-chaupheur/HTML/HTML/roles/admin/html/dashboard.html",
+		"/home/audrius/Documents/projects/taxi/assets/admin/js/pages/blankon.form.js",
+		"/home/audrius/Documents/projects/taxi/views/admin/dashboard/list.ejs",
+		"/home/audrius/Documents/projects/taxi/views/admin/driver/list.ejs",
+		"/home/audrius/Documents/projects/taxi/config/globals.js",
+		"/home/audrius/Documents/projects/taxi/Gruntfile.js",
+		"/home/audrius/Documents/projects/taxi/node_modules/sails/node_modules/skipper/test/form.test.js",
+		"/home/audrius/Documents/projects/taxi/assets/admin/less/components/form.less",
+		"/home/audrius/Documents/projects/taxi/assets/global/plugins/font-awesome/css/font-awesome.min.css",
+		"/home/audrius/Documents/projects/taxi/node_modules/sails/lib/hooks/blueprints/actions/findOne.js",
+		"/home/audrius/Documents/projects/taxi/api/responses/forbidden.js",
+		"/home/audrius/Documents/projects/taxi/assets/admin/js/apps.js",
+		"/home/audrius/Documents/projects/taxi/app.js",
+		"/home/audrius/Documents/projects/taxi/node_modules/sails/node_modules/prompt/examples/add-properties.js",
+		"/home/audrius/Documents/projects/taxi/api/models/Driver.js",
+		"/home/audrius/Documents/projects/taxi/assets/admin/less/dev/dev-error.less",
+		"/home/audrius/Documents/projects/taxi/assets/admin/less/dev/dev-mail.less",
+		"/home/audrius/Documents/projects/taxi/assets/admin/js/demo.js",
+		"/home/audrius/Documents/projects/taxi/api/models/Order.js",
+		"/home/audrius/Documents/projects/taxi/assets/admin/js/pages/blankon.table.js",
+		"/home/audrius/Documents/projects/elite-chaupheur/HTML/HTML/roles/admin/html/order-inner.html",
+		"/home/audrius/Documents/projects/taxi/config/http.js",
+		"/home/audrius/Documents/projects/taxi/config/models.js",
+		"/home/audrius/Documents/projects/taxi/config/connections.js",
+		"/home/audrius/Documents/projects/taxi/config/bootstrap.js",
+		"/home/audrius/Documents/projects/elite-chaupheur/HTML/HTML/roles/admin/html/orders.html",
+		"/home/audrius/Documents/projects/elite-chaupheur/HTML/HTML/roles/admin/html/new-order.html",
+		"/home/audrius/Documents/projects/taxi/node_modules/sails/node_modules/ejs-locals/test/fixtures/parent-include-chain.ejs",
+		"/home/audrius/Documents/projects/taxi/node_modules/sails/node_modules/skipper/standalone/Upstream/prototype.fatalIncomingError.js",
+		"/home/audrius/Documents/projects/taxi/assets/global/plugins/fuelux/js/pillbox.js",
+		"/home/audrius/Documents/projects/taxi/package.json",
+		"/home/audrius/Documents/projects/elite-chaupheur/HTML/HTML/roles/admin/html/client-inner.html",
+		"/home/audrius/Documents/projects/taxi/api/models/Company.js",
+		"/home/audrius/Documents/projects/elite-chaupheur/HTML/HTML/roles/admin/html/clients.html",
+		"/home/audrius/Documents/projects/taxi/views/admin/car/list.ejs",
+		"/home/audrius/Documents/projects/taxi/config/csrf.js",
+		"/home/audrius/Documents/projects/taxi/views/partials/footer.ejs",
+		"/home/audrius/Documents/projects/elite-chaupheur/HTML/HTML/roles/admin/html/driver-inner.html",
+		"/home/audrius/Documents/projects/taxi/api/models/Car.js",
+		"/home/audrius/Documents/projects/taxi/views/layout.ejs",
+		"/home/audrius/Documents/projects/taxi/views/admin/company/list.ejs",
+		"/home/audrius/Documents/projects/elite-chaupheur/HTML/HTML/roles/admin/html/drivers.html",
+		"/home/audrius/Documents/projects/taxi/views/partials/header.ejs",
+		"/home/audrius/Documents/projects/taxi/views/partials/sidebar.ejs",
+		"/home/audrius/Documents/projects/elite-chaupheur/HTML/HTML/roles/admin/html/register-car.html",
+		"/home/audrius/Documents/projects/elite-chaupheur/HTML/HTML/roles/admin/html/cars.html",
+		"/home/audrius/Documents/projects/elite-chaupheur/HTML/HTML/roles/admin/html/car-inner.html",
+		"/home/audrius/Documents/projects/blackthorn/wp-content/themes/blackthorn/functions/custom-functions/basic-wp-functions.php",
+		"/home/audrius/Documents/projects/taxi/config/session.js",
+		"/home/audrius/Documents/projects/taxi/node_modules/grunt-sync/sync.json",
+		"/home/audrius/Documents/projects/taxi/views/car/list.ejs",
+		"/home/audrius/Documents/projects/taxi/views/cars/index.ejs",
+		"/home/audrius/Documents/projects/royal court/THEME/header.php",
+		"/home/audrius/Documents/projects/royal court/THEME/functions/custom-functions/register-scripts.php",
+		"/home/audrius/Documents/projects/royal court/THEME/functions/custom-functions/register-styles.php",
+		"/home/audrius/Documents/projects/royal court/.htaccess",
+		"/home/audrius/Documents/projects/royal court/THEME/functions/custom-functions/ajax-sample.php",
+		"/home/audrius/Documents/projects/royal court/THEME/functions.php",
+		"/home/audrius/Documents/projects/royal court/THEME/page.php",
+		"/home/audrius/Documents/projects/royal court/THEME/functions/lib/hybridauth/config.php",
+		"/home/audrius/Documents/projects/royal court/THEME/functions/lib/hybridauth/Hybrid/thirdparty/OAuth/OAuth.php",
+		"/home/audrius/Documents/projects/royal court/THEME/functions/lib/hybridauth/Hybrid/Auth.php",
+		"/home/audrius/Documents/projects/royal court/THEME/functions/lib/hybridauth/Hybrid/Providers/Twitter.php",
+		"/home/audrius/Documents/projects/royal court/THEME/functions/lib/hybridauth/index.php",
+		"/home/audrius/Documents/projects/royal court/THEME/functions/lib/hybridauth/Hybrid/Provider_Adapter.php",
+		"/home/audrius/Documents/projects/royal court/hybridauth-2.3.0/hybridauth/Hybrid/Providers/Twitter.php",
+		"/home/audrius/Documents/projects/royal court/THEME/functions/lib/hybridauth/Hybrid/Endpoint.php",
+		"/home/audrius/Documents/projects/royal court/THEME/functions/lib/tmhOAuth.php",
+		"/home/audrius/Documents/projects/royal court/hybridauth-2.3.0/hybridauth/config.php",
+		"/home/audrius/Documents/projects/royal court/THEME/functions/custom-functions/basic-wp-functions.php",
+		"/home/audrius/Documents/projects/royal court/THEME/footer.php",
+		"/home/audrius/Documents/projects/royal court/THEME/functions/custom-functions/crop.php",
+		"/home/audrius/Documents/projects/royal court/THEME/assets/lib/js/site.min.js",
+		"/home/audrius/Documents/projects/royal court/THEME/assets/vendor/jcrop/jquery.Jcrop.min.js",
+		"/home/audrius/Documents/projects/royal court/THEME/templates/gallery.php",
+		"/home/audrius/Documents/projects/royal court/THEME/functions/plugins/advanced-custom-fields/lang/acf-fr_FR.mo",
+		"/home/audrius/Documents/projects/pcrepair/.htaccess",
+		"/home/audrius/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
+		"/home/audrius/.config/sublime-text-3/Packages/Default/Default (Linux).sublime-keymap",
+		"/home/audrius/Documents/projects/royal court/APP/assets/css/style.css",
+		"/home/audrius/Documents/projects/royal court/APP/templates/start.html",
+		"/home/audrius/Documents/projects/royal court/THEME/style.css",
+		"/home/audrius/Documents/projects/royal court/APP/mmlib/js/royalcourttheatre/site.js",
+		"/home/audrius/Documents/projects/royal court/THEME/package.json",
+		"/home/audrius/Documents/projects/royal court/APP/assets/js/main.js",
+		"/home/audrius/Documents/projects/royal court/THEME/assets/lib/css/royal-court/screen.css",
+		"/home/audrius/Documents/projects/hdcp/THEME/page.php",
+		"/home/audrius/Documents/projects/royal court/THEME/templates/main.php",
+		"/home/audrius/Documents/projects/royal court/THEME/functions/plugins/advanced-custom-fields/lang/acf-ja.mo",
+		"/home/audrius/Documents/projects/royal court/THEME/archive.php",
+		"/home/audrius/Documents/projects/royal court/THEME/assets/vendor/canvas2image/base64.js",
+		"/home/audrius/Documents/projects/royal court/THEME/assets/vendor/filereader/filereader.js",
+		"/home/audrius/Documents/projects/royal court/APP/templates/showMe.html",
+		"/home/audrius/Documents/projects/royal court/header.php",
+		"/home/audrius/Documents/projects/royal court/helpers.css",
+		"/home/audrius/Documents/projects/royal court/THEME/assets/vendor/jquery-ui/js/jquery-ui.min.js",
+		"/home/audrius/Documents/projects/royal court/THEME/functions/plugins/advanced-custom-fields/core/fields/select.php",
+		"/home/audrius/Documents/projects/royal court/APP/assets/js/controllers/ShareCtrl.js",
+		"/home/audrius/Documents/projects/royal court/THEME/functions/widgets/sidebar-button.php",
+		"/home/audrius/Documents/projects/royal court/THEME/single.php",
+		"/home/audrius/Documents/projects/royal court/THEME/sidebar.php",
+		"/home/audrius/Documents/projects/royal court/THEME/assets/vendor/jquery-ui/css/jquery.ui.core.css",
+		"/home/audrius/Documents/projects/royal court/THEME/assets/vendor/jquery-ui/css/jquery.ui.slider.css",
+		"/home/audrius/Downloads/ImageVampUp/css/style.css",
+		"/home/audrius/Downloads/ImageVampUp/index.html",
+		"/home/audrius/Documents/projects/royal court/THEME/assets/custom/js/main.js",
+		"/home/audrius/Documents/projects/royal court/THEME/functions/plugins/advanced-custom-fields/core/fields/date_picker/jquery.ui.datepicker.js",
+		"/home/audrius/Documents/projects/royal court/THEME/assets/vendor/bootstrap/js/jquery.bootstrap.wizard.min.js",
+		"/home/audrius/Documents/projects/royal court/APP/templates/resize.html",
+		"/home/audrius/Documents/projects/royal court/APP/mmlib/css/royal-court/screen.css"
+	],
+	"find":
+	{
+		"height": 36.0
+	},
+	"find_in_files":
+	{
+		"height": 157.0,
+		"where_history":
+		[
+			"/home/audrius/Documents/projects/royal court/THEME/functions/lib/hybridauth/Hybrid",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"1427015700",
+			"events_source",
+			" + ",
+			": ",
+			"Things",
+			"driver",
+			"company",
+			"response",
+			"assets/",
+			"assets",
+			"dashboard",
+			"clientfname",
+			"id",
+			"cars",
+			"driver",
+			"ec-delete",
+			"id=\"",
+			"driver",
+			"title",
+			"company",
+			"<input",
+			"driver",
+			": {",
+			"driver",
+			"\"",
+			"name=\"",
+			"driver",
+			"yourAction",
+			"	            \n",
+			"list",
+			"admin/order/list",
+			"driver",
+			"drivers",
+			"companies",
+			"cars",
+			"assets/",
+			"companies",
+			"drivers",
+			"required: true",
+			"value=\"",
+			"Company Name",
+			"driver",
+			"DriverController",
+			"drivers",
+			"driver",
+			"Driver",
+			"driver",
+			"drivers",
+			"placeholder",
+			"googleplus",
+			"placeholder",
+			"Driver",
+			"driver",
+			"Driver",
+			"car",
+			"car.",
+			"car",
+			"Car",
+			"car",
+			"Car",
+			"car",
+			"cars",
+			"h3",
+			"les/",
+			"/",
+			"../",
+			"ype: 'STRING'",
+			"corndog",
+			"send_tweet_now",
+			"cart_items",
+			"toggle_project_timeslips_ajax",
+			"/var/www/html/dev/twits/wp-content/themes/twits",
+			"generate_timestamp()",
+			"timestamp",
+			"timestapm",
+			"time",
+			"date",
+			"time",
+			"\"enabled\" => true",
+			"true",
+			"http://horiondigital.com/dev/twits/wp-content/themes/twits/",
+			"nextSlide",
+			"nextslide",
+			"dd",
+			"nextslide",
+			"nextSlide",
+			"nextslide",
+			"text-shadow: 1px 1px 1px #000;",
+			"href=\"",
+			"a#btnS",
+			"a>",
+			"#btnSave",
+			"show",
+			"hide",
+			";\">",
+			"toDataURL",
+			"/90)%4",
+			"/ 90) % 4",
+			"rotate",
+			"//",
+			")",
+			"::",
+			"props_list",
+			"repeater_field_name",
+			", $('#objects')",
+			"beard",
+			"crop",
+			"crop_button_text",
+			"btn-soc",
+			"btnSave",
+			"cropsubmit",
+			"wp_upload_dir",
+			"data",
+			"file_return",
+			"toggle_project_timeslips_ajax",
+			"#background",
+			"draggable_elem",
+			"html2canvas",
+			"submit",
+			"photoFrame2Rotation",
+			"targetfile",
+			"@",
+			"index",
+			"this",
+			"draggable_elem",
+			"tools",
+			"result",
+			"sImage"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 3,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "views/admin/order/add.ejs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9822,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5224,
+								5224
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 272.0,
+						"translation.y": 1343.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "api/models/Order.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1867,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1230,
+								1230
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 870.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "assets/admin/js/pages/blankon.calendar.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3348,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3337,
+								3337
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 255.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "assets/global/plugins/bootstrap-calendar/calendar-events-sample.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2548,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								325,
+								325
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": -0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "config/routes.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4589,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3872,
+								3872
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1975.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "api/controllers/OrderController.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2933,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								409,
+								409
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "views/admin/calendar/list.ejs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5027,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								244,
+								244
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1228,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1228,
+								1228
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "tasks/pipeline.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3890,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2373,
+								2373
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": -0.0,
+						"translation.y": 612.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "views/partials/sidebar.ejs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4506,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1250,
+								1250
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 170.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 36.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 110.0
+	},
+	"output.sftp":
+	{
+		"height": 122.0
+	},
+	"project": "taxi.sublime-project",
+	"replace":
+	{
+		"height": 68.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"pip",
+				"taxi/tasks/pipeline.js"
+			],
+			[
+				"calendar-events-sample.json",
+				"taxi/assets/global/plugins/bootstrap-calendar/calendar-events-sample.json"
+			],
+			[
+				"blank",
+				"taxi/assets/admin/js/pages/blankon.calendar.js"
+			],
+			[
+				"glo",
+				"taxi/config/globals.js"
+			],
+			[
+				"fomr.js",
+				"taxi/assets/admin/js/pages/blankon.form.js"
+			],
+			[
+				"app",
+				"taxi/assets/admin/js/apps.js"
+			],
+			[
+				"pi",
+				"taxi/tasks/pipeline.js"
+			],
+			[
+				"pipe",
+				"taxi/tasks/pipeline.js"
+			],
+			[
+				"hea",
+				"THEME/header.php"
+			],
+			[
+				"regis",
+				"THEME/functions/custom-functions/register-scripts.php"
+			],
+			[
+				"fun",
+				"THEME/functions.php"
+			],
+			[
+				"re",
+				"THEME/functions/custom-functions/register-scripts.php"
+			],
+			[
+				"foot",
+				"THEME/footer.php"
+			],
+			[
+				"st",
+				"THEME/assets/custom/css/style.css"
+			],
+			[
+				"pa",
+				"THEME/page.php"
+			],
+			[
+				"foo",
+				"THEME/footer.php"
+			],
+			[
+				"bas",
+				"THEME/functions/custom-functions/basic-wp-functions.php"
+			],
+			[
+				"page",
+				"THEME/page.php"
+			],
+			[
+				"mai",
+				"THEME/templates/main.php"
+			],
+			[
+				"s",
+				"APP/mmlib/js/royalcourttheatre/site.js"
+			],
+			[
+				"ajax",
+				"THEME/functions/custom-functions/ajax-sample.php"
+			],
+			[
+				"basi",
+				"THEME/functions/custom-functions/basic-wp-functions.php"
+			],
+			[
+				"scree",
+				"THEME/assets/lib/css/royal-court/screen.css"
+			],
+			[
+				"si",
+				"THEME/assets/lib/js/site.min.js"
+			],
+			[
+				"site",
+				"THEME/assets/lib/js/site.min.js"
+			],
+			[
+				"head",
+				"THEME/header.php"
+			],
+			[
+				"main",
+				"APP/assets/js/main.js"
+			],
+			[
+				"reg",
+				"THEME/functions/custom-functions/register-scripts.php"
+			],
+			[
+				"cree",
+				"APP/mmlib/css/royal-court/screen.css"
+			],
+			[
+				"widge",
+				"assets/admin/js/pages/blankon.widgets.js"
+			],
+			[
+				"mor",
+				"assets/global/plugins/morris/morris.js"
+			],
+			[
+				"morr",
+				"assets/global/plugins/morris/morris.css"
+			],
+			[
+				"scr",
+				"functions/hdcp-functions/register-scripts.php"
+			],
+			[
+				"custom",
+				"assets/admin/css/custom.css"
+			],
+			[
+				"for",
+				"functions/plugins/contact-form/form.php"
+			],
+			[
+				"cus",
+				"assets/admin/css/custom.css"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 280.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

@@ -1,0 +1,383 @@
+<!-- START @PAGE CONTENT -->
+<section id="page-content">
+
+    <!-- Start page header -->
+    <div class="header-content">
+        <h2><i class="fa fa-building"></i> Company</h2>
+    </div><!-- /.header-content -->
+    <!--/ End page header -->
+
+    <!-- Start body content -->
+    <div class="body-content animated fadeIn">
+
+        <div class="row">
+        <div class="col-lg-3 col-md-3 col-sm-4">
+
+            <div class="panel rounded shadow">
+                <div class="panel-body bg-twitter">
+                    <ul class="list-unstyled no-margin">
+                        <li class="text-center">
+                            <i class="fa fa-building fa-5x" style="color:white;"></i>
+                        </li>
+                        <li class="text-center">
+                            <h4 class="text-capitalize"><%= company.title %></h4>
+                        </li>
+                        <li>
+                            <ul class="list-group no-margin br-3">
+                                <li class="list-group-item bg-twitter"><i class="fa fa-envelope mr-5"></i> <%= company.email %></li>
+                                <li class="list-group-item bg-twitter"><i class="fa fa-phone mr-5"></i> <%= company.phone %></li>
+                            </ul>
+                        </li>
+                    </ul><!-- /.list-unstyled -->
+                </div><!-- /.panel-body -->
+            </div>
+            <!-- Start input fields - horizontal form -->
+                <div class="panel rounded shadow">
+                    <div class="panel-heading">
+                        <div class="pull-left">
+                            <h3 class="panel-title">Company Details</h3>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div><!-- /.panel-heading -->
+                    <div class="panel-body no-padding rounded-bottom">
+                        <form action="/admin/company/update/<%= company.id %>" method="POST" class="form-horizontal form-bordered">
+                            <div class="form-body">
+
+                                <div class="form-group">
+                                    <div class="col-sm-12">
+                                        <div class="input-group">
+                                            <div class="input-group-addon">£</div>
+                                            <input class="form-control" name="hrate" placeholder="Hourly Rate" type="text" value="<%= company.hrate %>">
+                                            <div class="input-group-addon">/hour</div>
+                                        </div>
+                                    </div>
+                                </div><!-- /.form-group -->
+
+                                <div class="form-group">
+                                    <div class="col-sm-12">
+                                        <div class="input-group">
+                                            <div class="input-group-addon">£</div>
+                                            <input class="form-control" name="drate" placeholder="Daily Rate" type="text" value="<%= company.drate %>">
+                                            <div class="input-group-addon">/day</div>
+                                        </div>
+                                    </div>
+                                </div><!-- /.form-group -->
+
+                                <div class="form-group">
+                                    <div class="col-sm-12">
+                                        <div class="input-group">
+                                            <div class="input-group-addon">£</div>
+                                            <input class="form-control" name="horate" placeholder="Driver only Rate" type="text" value="<%= company.horate %>">
+                                            <div class="input-group-addon">/hour driver only</div>
+                                        </div>
+                                    </div>
+                                </div><!-- /.form-group -->
+
+                                <div class="form-group">
+                                    <div class="col-sm-12">
+                                        <div class="input-group">
+                                            <div class="input-group-addon">£</div>
+                                            <input class="form-control" name="dorate" placeholder="Driver only Rate" type="text" value="<%= company.dorate %>">
+                                            <div class="input-group-addon">/day driver only</div>
+                                        </div>
+                                    </div>
+                                </div><!-- /.form-group -->
+
+                                <div class="form-group">
+                                    <div class="col-sm-12">
+                                        <input class="form-control" name="title" placeholder="Company Name" type="text" value="<%= company.title %>">
+                                    </div>
+                                </div><!-- /.form-group -->
+                                <div class="form-group">
+                                    <div class="col-sm-12">
+                                        <input class="form-control" name="responsible" placeholder="Responsible Person" type="text" value="<%= company.responsible %>">
+                                    </div>
+                                </div><!-- /.form-group -->
+                                <div class="form-group">
+                                    <div class="col-sm-12">
+                                        <input class="form-control" name="email" placeholder="Email" type="text" value="<%= company.email %>">
+                                    </div>
+                                </div><!-- /.form-group -->
+                                <div class="form-group">
+                                    <div class="col-sm-12">
+                                        <input class="form-control" name="phone" placeholder="Phone" type="text" value="<%= company.phone %>">
+                                    </div>
+                                </div><!-- /.form-group -->
+
+                            </div><!-- /.form-body -->
+                            <div class="form-footer">
+                                <div class="pull-right">
+                                    <a href="javascript:void();" class="btn btn-danger" data-toggle="modal" data-target=".ec-delete">delete</a>
+                                    <input class="btn btn-success" type="submit" value="save" />
+                                </div>
+                                <div class="clearfix"></div>
+                            </div><!-- /.form-footer -->
+                        </form>
+                    </div><!-- /.panel-body -->
+                </div><!-- /.panel -->
+                <!--/ End input fields - horizontal form -->
+        </div>
+        <div class="col-lg-9 col-md-9 col-sm-8">
+
+                <div class="panel panel-tab panel-tab-double rounded shadow">
+                    <div class="panel-heading no-padding">
+                        <div class="pull-left">
+                            <ul class="nav nav-tabs">
+                                <li class="active">
+                                    <a href="#tab2-1" data-toggle="tab">
+                                        <i class="fa fa-book"></i>
+                                        <div>
+                                            <span class="text-strong">Orders</span>
+                                            <span>Received from the the client</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#tab2-2" data-toggle="tab">
+                                        <i class="fa fa-file-text"></i>
+                                        <div>
+                                            <span class="text-strong">Invoices</span>
+                                            <span>Isued to the client</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="pull-right inner-client-button2">
+                            <button class="btn btn-theme" data-toggle="modal" data-target=".ec-invoices">Generate Invoice</button>
+                            <a href="#" class="btn btn-info">EXPORT CSV</a>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div><!-- /.panel-heading -->
+                    <div class="panel-body">
+                        <div class="tab-content">
+                            <div class="tab-pane fade in active" id="tab2-1">
+                                <!-- Start datatable -->
+                                <table id="datatable-dom" class="table table-striped table-success">
+                                    <thead>
+                                    <tr>
+                                        <th data-class="expand">Client</th>
+                                        <th data-hide="phone">Start Point</th>
+                                        <th data-hide="phone">End Point</th>
+                                        <th data-hide="phone,tablet">Driver</th>
+                                        <th data-hide="phone,tablet">Car</th>
+                                        <th data-hide="phone,tablet">Status</th>
+                                        <th data-hide="phone,tablet">Order ID</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <% _.each(orders, function (order) { %>
+                                    <tr>
+                                        <td><%= order.clientfname %> <%= order.clientlname %></td>
+                                        <td><%= order.pickuplocation %></td>
+                                        <td><%= order.finaldestination %></td>
+                                        <td><a href="/admin/driver/<%= order.driver.id %>"><%= order.driver.fname %> <%= order.driver.lname %></a></td>
+                                        <td><a href="/admin/car/<%= order.car.id %>"><%= order.car.regnr %></a></td>
+                                        <td>
+                                        <% if(order.status == 'not started') { %>
+                                            <span class="badge">Not Started</span>
+                                        <% } if(order.status == 'in progress') { %>
+                                            <span class="badge badge-warning">In Progress</span>
+                                        <% } if(order.status == 'did not show up') { %>
+                                            <span class="badge badge-danger">Did not show up</span>
+                                        <% } if(order.status == 'delivered') { %>
+                                            <span class="badge badge-success">Delivered</span>
+                                        <% } if(order.status == 'invoiced') { %>
+                                            <span class="badge badge-default">Invoiced</span>
+                                        <% } %>
+                                        </td>
+                                        <td><a href="/admin/order/<%= order.id %>">HD-<%= order.orderid %></a></td>
+                                    </tr>
+                                    <% }) %>
+                                    </tbody>
+                                </table>
+                                <!--/ End datatable -->
+                            </div>
+                            <div class="tab-pane fade" id="tab2-2">
+                                <!-- Start sample table -->
+                                <div class=" rounded mb-20">
+                                    <table id="datatable-dom2" class="table table-striped table-success">
+                                        <thead>
+                                        <tr>
+                                            <th data-class="expand" class="text-center border-right">ID</th>
+                                            <th data-class="phone">Date of issue</th>
+                                            <th data-class="phone" class="text-center">Total Amount</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td class="text-center border-right"><a href="single-invoice.html">INV-0001</a></td>
+                                            <td>2015-01-03</td>
+                                            <td class="text-center">£2,456.54</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center border-right"><a href="single-invoice.html">INV-0002</a></td>
+                                            <td>2015-01-03</td>
+                                            <td class="text-center">£1,320,25</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center border-right"><a href="single-invoice.html">INV-0003</a></td>
+                                            <td>2015-01-03</td>
+                                            <td class="text-center">£1,156.54</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center border-right"><a href="single-invoice.html">INV-0004</a></td>
+                                            <td>2015-01-03</td>
+                                            <td class="text-center">£1,854.36</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center border-right"><a href="single-invoice.html">INV-0005</a></td>
+                                            <td>2015-01-03</td>
+                                            <td class="text-center">£780,50</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center border-right"><a href="single-invoice.html">INV-0006</a></td>
+                                            <td>2015-01-03</td>
+                                            <td class="text-center">£1,624,40</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center border-right"><a href="single-invoice.html">INV-0007</a></td>
+                                            <td>2015-01-03</td>
+                                            <td class="text-center">£1,447,25</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div><!-- /.table-responsive -->
+                                <!--/ End sample table -->
+                            </div>
+                        </div><!-- end of tab-content -->
+                    </div><!-- /.panel-body -->
+                </div><!-- /.panel -->
+            </div>
+        </div><!-- /.row -->
+
+    </div><!-- /.body-content -->
+    <!--/ End body content -->
+
+</section><!-- /#page-content -->
+<!--/ END PAGE CONTENT -->
+
+<div class="modal fade ec-delete" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="panel panel-danger">
+                <div class="panel-heading">
+                    <div class="pull-left">
+                        <h3 class="panel-title">Delete this company?</h3>
+                    </div>
+                    <div class="pull-right">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="panel-body no-padding rounded-bottom">
+                    <form action="/admin/company/destroy/<%= company.id %>" method="POST" class="form-horizontal form-bordered">
+                        <div class="form-body">
+                            <div class="gap-30"></div>
+                            <h4 class="text-center">Are you sure, you want to delete this company? Data recovery will not be possible!</h4>
+                            <div class="gap-30"></div>
+                        </div><!-- /.form-body -->
+                        <div class="form-footer">
+                            <div class="pull-right">
+                                <button class="btn btn-success mr-5" data-dismiss="modal">Cancel</button>
+                                <input class="btn btn-danger" type="submit" value="Delete" />
+                            </div>
+                            <div class="clearfix"></div>
+                        </div><!-- /.form-footer -->
+                    </form>
+                </div><!-- /.panel-body -->
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!--/ End table in modal element -->
+
+<!-- Start table in modal element -->
+<div class="modal fade ec-invoices" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal-dialog modal-lg">
+<form action="/admin/invoices/create">
+<div class="modal-content">
+<div class="panel panel-success">
+<div class="panel-heading">
+    <div class="pull-left">
+        <h3 class="panel-title">Select orders to include into invoice</h3>
+    </div>
+    <div class="pull-right">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    </div>
+    <div class="clearfix"></div>
+</div>
+<div class="panel-body no-padding">
+<div class="table-responsive">
+<table class="table table-striped">
+<thead>
+<tr>
+    <th data-class="expand"></th>
+    <th data-class="phone">Client</th>
+    <th data-hide="phone">Start Point</th>
+    <th data-hide="phone">End Point</th>
+    <th data-hide="phone">Driver</th>
+    <th data-hide="phone">Car</th>
+    <th data-class="phone">Time</th>
+    <th data-hide="phone">Order ID</th>
+</tr>
+</thead>
+<tbody>
+<% _.each(orders, function (order) { %>
+    <% if(order.status == 'delivered') { %>
+        <%
+        var total_seconds = order.timelogged
+        function pretty_time_string(num) {
+          return ( num < 10 ? "0" : "" ) + num;
+        }
+        var hours = Math.floor(total_seconds / 3600);
+        total_seconds = total_seconds % 3600;
+        var minutes = Math.floor(total_seconds / 60);
+        total_seconds = total_seconds % 60;
+        var seconds = Math.floor(total_seconds);
+        hours = pretty_time_string(hours);
+        minutes = pretty_time_string(minutes);
+        seconds = pretty_time_string(seconds);
+        var currentTimeString = hours + ":" + minutes + ":" + seconds;
+         %>
+        <tr>
+            <td>
+                <div class="ckbox ckbox-theme">
+                    <input id="checkbox-unchecked<%= order.id %>" name="orders" value="<%= order.id %>" type="checkbox">
+                    <label for="checkbox-unchecked<%= order.id %>"></label>
+                </div>
+            </td>
+            <td><%= order.clientfname %> <%= order.clientlname %></td>
+            <td><%= order.pickuplocation %></td>
+            <td><%= order.finaldestination %></td>
+            <td><a href="/admin/driver/<%= order.driver.id %>"><%= order.driver.fname %> <%= order.driver.lname %></a></td>
+            <td><a href="/admin/car/<%= order.car.id %>"><%= order.car.regnr %></a></td>
+            <td><%= currentTimeString %></td>
+            <td><a href="/admin/order/<%= order.id %>">HD-<%= order.orderid %></a></td>
+        </tr>
+    <% } %>
+<% }) %>
+<input type="hidden" name="company" value="<%= company.id %>">
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="modal-footer">
+    <ul class="list-inline">
+        <li>
+            <select class="form-control" name="rate">
+                <option value="<%= company.hrate %>">Hourly Rate</option>
+                <option value="<%= company.drate %>">Daily Rate</option>
+                <option value="<%= company.horate %>">Driver only Hourly Rate</option>
+                <option value="<%= company.dorate %>">Driver only Daily Rate</option>
+            </select>
+        </li>
+        <li><input type="submit" class="btn btn-success" value="Generate Invoice" /></li>
+    </ul>
+</div>
+</div><!-- /.modal-content -->
+</form>
+</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!--/ End table in modal element -->
