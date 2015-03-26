@@ -163,6 +163,32 @@
                             </div>
                             </div><!-- /.form-group -->
 
+                            <div class="form-group">
+                            <label class="col-sm-3 control-label">Rate type</label>
+                            <div class="col-sm-9">
+                            <%
+                            var type = order.ratetype;
+                            var text;
+                            if (type == 'hrate')  {text = 'Hourly Rate';}
+                            if (type == 'drate')  {text = 'Daily Rate';}
+                            if (type == 'horate') {text = 'Driver only Hourly Rate';}
+                            if (type == 'dorate') {text = 'Driver only Daily Rate';}
+                            %>
+                            <select name="ratetype" data-placeholder="Choose a Company" class="chosen-select mb-15" tabindex="2">
+                                <option value="<%= order.ratetype %>"><%= text %></option>
+                                <% if (type != 'hrate' ) { %>
+                                <option value="hrate">Hourly Rate</option>
+                                <% } if (type != 'drate' ) { %>
+                                <option value="drate">Daily Rate</option>
+                                <% } if (type != 'horate' ) { %>
+                                <option value="horate">Driver only Hourly Rate</option>
+                                <% } if (type != 'dorate' ) { %>
+                                <option value="dorate">Driver only Daily Rate</option>
+                                <% } %>
+                            </select>
+                            </div>
+                            </div><!-- /.form-group -->
+
 
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label">Client Reference number</label>

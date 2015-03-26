@@ -78,7 +78,11 @@ jQuery(function($) {
     });
 
 
-
+    $('select.order-rate').change(function() {
+        orderId = $(this).data('orderid');
+        rate = $(this).val();
+       $.post( "http://"+window.location.host + "/order/"+orderId, {ratetype: rate} );
+    });
 
 
 });

@@ -1,4 +1,14 @@
-<!-- START @PAGE CONTENT -->
+<%
+function pad (str, max) {
+      return str.length < max ? pad("0" + str, max) : str;
+}
+Number.prototype.format = function(n, x, s, c) {
+    var re = '\\d(?=(\\d{' + (x || 3) + '})+' + (n > 0 ? '\\D' : '$') + ')',
+        num = this.toFixed(Math.max(0, ~~n));
+
+    return (c ? num.replace('.', c) : num).replace(new RegExp(re, 'g'), '$&' + (s || ','));
+}
+%>
 <section id="page-content">
 
     <!-- Start page header -->
@@ -14,10 +24,10 @@
                 <div class="panel panel-invoice rounded" contenteditable="true">
                     <div class="panel-heading">
                         <div class="pull-left">
-                            <h3 class="no-margin">Invoice #INV-0001</h3>
+                            <h3 class="no-margin">Invoice #INV-<%= pad(invoice.id.toString(),4) %></h3>
                         </div>
                         <div class="pull-right">
-                            <div class="logo-block"><img src="/global/img/logo/logo-djavaui.png" alt="Logo"></div>
+                            <!-- <div class="logo-block"><img src="/global/img/logo/logo-djavaui.png" alt="Logo"></div> -->
                         </div>
                         <div class="clearfix"></div>
                     </div><!-- /.panel-heading -->
@@ -156,4 +166,4 @@
 
 
 </section><!-- /#page-content -->
-<!--/ END PAGE CONTENT -->
+<!--/ END PAGE CONTENT

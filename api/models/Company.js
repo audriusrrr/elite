@@ -25,16 +25,16 @@ module.exports = {
   	    required: true
   	},
   	hrate: {
-  	    type: 'STRING',
+  	    type: 'float',
   	},
   	drate: {
-  	    type: 'STRING',
+  	    type: 'float',
   	},
   	horate: {
-  	    type: 'STRING',
+  	    type: 'float',
   	},
   	dorate: {
-  	    type: 'STRING',
+  	    type: 'float',
   	},
   }
 };

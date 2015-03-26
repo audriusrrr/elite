@@ -205,41 +205,34 @@
                                         </tr>
                                         </thead>
                                         <tbody>
+                                        <% _.each(invoices, function (invoice) { %>
                                         <tr>
-                                            <td class="text-center border-right"><a href="single-invoice.html">INV-0001</a></td>
-                                            <td>2015-01-03</td>
-                                            <td class="text-center">£2,456.54</td>
+                                            <td class="text-center border-right"><a href="/admin/invoice/<%= invoice.id %>">INV-<%= pad(invoice.id.toString(),4) %></a></td>
+                                            <td>
+                                            <%
+                                            var a = invoice.updatedAt;
+                                            var year = a.getFullYear();
+                                            var month = a.getMonth();
+                                            var date = a.getDate();
+                                            function pad (str, max) {
+                                                  return str.length < max ? pad("0" + str, max) : str;
+                                            }
+                                            var time = year + '-' + pad(month.toString(),2) + '-' + pad(date.toString(),2);
+                                            %>
+                                            <%= time %>
+                                            </td>
+                                            <%
+                                                Number.prototype.format = function(n, x, s, c) {
+                                                    var re = '\\d(?=(\\d{' + (x || 3) + '})+' + (n > 0 ? '\\D' : '$') + ')',
+                                                        num = this.toFixed(Math.max(0, ~~n));
+
+                                                    return (c ? num.replace('.', c) : num).replace(new RegExp(re, 'g'), '$&' + (s || ','));
+                                                };
+                                                   var price = invoice.price.format(2, 3, ',', '.');
+                                            %>
+                                            <td class="text-center">£<%= price %></td>
                                         </tr>
-                                        <tr>
-                                            <td class="text-center border-right"><a href="single-invoice.html">INV-0002</a></td>
-                                            <td>2015-01-03</td>
-                                            <td class="text-center">£1,320,25</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-center border-right"><a href="single-invoice.html">INV-0003</a></td>
-                                            <td>2015-01-03</td>
-                                            <td class="text-center">£1,156.54</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-center border-right"><a href="single-invoice.html">INV-0004</a></td>
-                                            <td>2015-01-03</td>
-                                            <td class="text-center">£1,854.36</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-center border-right"><a href="single-invoice.html">INV-0005</a></td>
-                                            <td>2015-01-03</td>
-                                            <td class="text-center">£780,50</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-center border-right"><a href="single-invoice.html">INV-0006</a></td>
-                                            <td>2015-01-03</td>
-                                            <td class="text-center">£1,624,40</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-center border-right"><a href="single-invoice.html">INV-0007</a></td>
-                                            <td>2015-01-03</td>
-                                            <td class="text-center">£1,447,25</td>
-                                        </tr>
+                                        <% }) %>
                                         </tbody>
                                     </table>
                                 </div><!-- /.table-responsive -->
@@ -314,8 +307,7 @@
 <tr>
     <th data-class="expand"></th>
     <th data-class="phone">Client</th>
-    <th data-hide="phone">Start Point</th>
-    <th data-hide="phone">End Point</th>
+    <th data-hide="phone">Billing type</th>
     <th data-hide="phone">Driver</th>
     <th data-hide="phone">Car</th>
     <th data-class="phone">Time</th>
@@ -348,8 +340,28 @@
                 </div>
             </td>
             <td><%= order.clientfname %> <%= order.clientlname %></td>
-            <td><%= order.pickuplocation %></td>
-            <td><%= order.finaldestination %></td>
+            <td>
+                <%
+                var type = order.ratetype;
+                var text;
+                if (type == 'hrate')  {text = 'Hourly Rate';}
+                if (type == 'drate')  {text = 'Daily Rate';}
+                if (type == 'horate') {text = 'Driver only Hourly Rate';}
+                if (type == 'dorate') {text = 'Driver only Daily Rate';}
+                %>
+                <select data-placeholder="Choose a Rate" data-orderid="<%= order.id %>" class="form-control order-rate" tabindex="2">
+                    <option value="<%= order.ratetype %>"><%= text %></option>
+                    <% if (type != 'hrate' ) { %>
+                    <option value="hrate">Hourly Rate</option>
+                    <% } if (type != 'drate' ) { %>
+                    <option value="drate">Daily Rate</option>
+                    <% } if (type != 'horate' ) { %>
+                    <option value="horate">Driver only Hourly Rate</option>
+                    <% } if (type != 'dorate' ) { %>
+                    <option value="dorate">Driver only Daily Rate</option>
+                    <% } %>
+                </select>
+            </td>
             <td><a href="/admin/driver/<%= order.driver.id %>"><%= order.driver.fname %> <%= order.driver.lname %></a></td>
             <td><a href="/admin/car/<%= order.car.id %>"><%= order.car.regnr %></a></td>
             <td><%= currentTimeString %></td>
@@ -365,14 +377,7 @@
 </div>
 <div class="modal-footer">
     <ul class="list-inline">
-        <li>
-            <select class="form-control" name="rate">
-                <option value="<%= company.hrate %>">Hourly Rate</option>
-                <option value="<%= company.drate %>">Daily Rate</option>
-                <option value="<%= company.horate %>">Driver only Hourly Rate</option>
-                <option value="<%= company.dorate %>">Driver only Daily Rate</option>
-            </select>
-        </li>
+
         <li><input type="submit" class="btn btn-success" value="Generate Invoice" /></li>
     </ul>
 </div>

@@ -22,11 +22,14 @@ module.exports = {
 		var orders = Order
 			.find({company: request.param('id')})
 			.populate('driver').populate('car');
+		var invoices = Invoice
+			.find({company: request.param('id')});
 		var company = Company.findOne(request.param('id'));
 
 		Promise.props({
 		  orders: orders,
 		  company: company,
+		  invoices: invoices,
 		  title: 'admin-Clients'
 		}).then(function(result) {
 		  response.view('admin/company/show', result);

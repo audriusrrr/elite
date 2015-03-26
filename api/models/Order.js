@@ -84,6 +84,10 @@ module.exports = {
     invoice: {
           model:'invoice',
     },
+    ratetype: {
+         type: 'string',
+         enum: ['hrate', 'drate', 'horate', 'dorate']
+    },
   },
   beforeCreate: function(values, next) {
         newDate = new Date(values.pickupdate + ' ' + values.pickuptime + ':00');

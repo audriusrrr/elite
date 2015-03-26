@@ -15,29 +15,42 @@ module.exports = {
 	      collection: 'order',
     	  via: 'invoice'
   		},
-  	 	rate: {
-  	    	type: 'integer',
-  	    	defaultsTo: 0
-  	  	},
   	  	price: {
-  	    	type: 'string',
-  	    	defaultsTo: 0
+  	    	type: 'float',
+  	    	defaultsTo: 0,
+  	    	required: true
   	  	},
   	},
   	beforeCreate: function(values, next) {
         var aggprice = 0;
-        var rate = values.rate;
-        var orders = values.orders;
-        var orders = Order.find({id: orders});
+        var ordersArr = values.orders;
+        // var update = Order.update({id: ordersArr},{status:'invoiced'});
+        var orders = Order.find({id: ordersArr}).populate('company');
 
         Promise.props({
           orders: orders,
+          // update: update,
         }).then(function(result) {
         	var orders = result.orders;
         	for (var i = orders.length - 1; i >= 0; i--) {
-        		values.price = values.price + orders[i].timelogged * rate / 3600;
+        		if(orders[i].ratetype == 'hrate') {
+        			values.price = (values.price + orders[i].timelogged * parseInt(orders[i].company.hrate) / 3600);
+        		}
+        		if (orders[i].ratetype == 'horate') {
+        			values.price = (values.price + orders[i].timelogged * parseInt(orders[i].company.horate) / 3600);
+        		}
+        		if (orders[i].ratetype == 'drate') {
+        			values.price = (values.price + parseInt(orders[i].company.drate));
+        		}
+        		if (orders[i].ratetype == 'dorate') {
+        			values.price = (values.price + parseInt(orders[i].company.dorate));
+        		}
         	};
+        }).then(function(result) {
+        	Order.update({id: ordersArr},{status:'invoiced'}).then(function(){
         	next();
+
+        	});
         });
 	},
 	// beforeUpdate: function(values, next) {
