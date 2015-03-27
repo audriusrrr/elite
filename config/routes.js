@@ -165,6 +165,27 @@ module.exports.routes = {
 },
 
 
+// CLIENT AREA
+
+// DASHBOARD
+'get /company/orders/:id': {
+  controller: 'OrderController',
+  action: 'complist'
+},
+'get /company/order/:id': {
+  controller: 'OrderController',
+  action: 'compshow'
+},
+'get /company/invoices/:id': {
+  controller: 'InvoiceController',
+  action: 'complist'
+},
+'get /company/invoice/:id': {
+  controller: 'InvoiceController',
+  action: 'compshow'
+},
+
+
 
   /***************************************************************************
   *                                                                          *

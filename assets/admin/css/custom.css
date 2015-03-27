@@ -21,3 +21,43 @@
 .gap-40 {height: 40px; display: block; clear: both;}
 .gap-50 {height: 50px; display: block; clear: both;}
 .gap-500 {height: 500px; display: block; clear: both;}
+[contenteditable="true"] {outline: none !important;}
+@media print {
+	 @page { size: landscape; margin: 2mm 4mm;}
+    .myPritn {
+        display: block !important;
+        background-color: white;
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        margin: 0;
+        padding: 0px;
+        line-height: 18px;
+    }
+    #page-content {margin: 0 !important;}
+    .body-content,
+    .panel-body {padding: 0 !important;}
+    .table-theme thead tr th {
+    	background-color: #fff #fff #fff !important;
+		border-color: #fff #fff #fff !important;
+		color: #000;
+		font-size: 12px;
+		border-width: 0 !important;
+    }
+    .table tbody tr td,
+    .table tbody tr td h4 {
+    	font-size: 12px !important;
+    	margin: 0;
+    	padding: 0;
+    	line-height: 15px;
+    }
+    .header-content,
+    #sidebar-left,
+    #header,
+    .panel-footer {
+    	display: none;
+    }
+
+}

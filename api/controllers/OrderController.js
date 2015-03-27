@@ -174,6 +174,31 @@ module.exports = {
 		}).then(function(result) {
 		  response.view('driver/jobs/show', result);
 		});
-	}
+	},
+	complist: function(request, response) {
+		var orders = Order
+			.find({company: request.param('id')})
+			.populate('driver').populate('car');
+		var company = Company.findOne(request.param('id'));
+
+		Promise.props({
+		  orders: orders,
+		  company: company,
+		  title: 'client-Orders'
+		}).then(function(result) {
+		  response.view('company/orders/list', result);
+		});
+	},
+	compshow: function(request, response) {
+		var order = Order.findOne(request.param('id')).populate('company').populate('driver').populate('car');
+		Promise.props({
+		  order: order,
+		}).then(function(result) {
+		  var order = result.order;
+		  return order;
+		}).then(function(order) {
+			response.view('company/orders/show', {order: order, company: order.company, title: 'client-Orders'});
+		});
+	},
 };
 

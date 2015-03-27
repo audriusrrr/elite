@@ -20,6 +20,9 @@ module.exports = {
   	    	defaultsTo: 0,
   	    	required: true
   	  	},
+  	  	snapshot: {
+  	  		type: 'text'
+  	  	}
   	},
   	beforeCreate: function(values, next) {
         var aggprice = 0;

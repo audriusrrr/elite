@@ -21,7 +21,7 @@ Number.prototype.format = function(n, x, s, c) {
 
         <div class="row">
             <div class="col-md-12">
-                <div class="panel panel-invoice rounded">
+                <div class="panel panel-invoice rounded" id="clientInvoice">
                     <div class="snapshot-save">
                         <% if(invoice.snapshot && invoice.snapshot != '') { %>
                             <%- invoice.snapshot %>
@@ -49,7 +49,7 @@ Number.prototype.format = function(n, x, s, c) {
                                         </address>
                                     </div>
                                 </div>
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 contedit" contenteditable="true">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                                     <div class="text-right">
                                         <h3 class="mt-0">Client information</h3>
                                         <strong>TO</strong>
@@ -90,7 +90,7 @@ Number.prototype.format = function(n, x, s, c) {
                                         <th>Total Price £</th>
                                     </tr>
                                     </thead>
-                                    <tbody class="contedit" contenteditable="true">
+                                    <tbody>
                                     <% _.each(orders, function (order) { %>
                                     <tr>
                                         <td><div class="product-name"><h4>HD-<%= order.orderid %></h4></div></td>
@@ -145,7 +145,7 @@ Number.prototype.format = function(n, x, s, c) {
                                     </tr>
                                     <% }) %>
                                     </tbody>
-                                    <tfoot class="contedit" contenteditable="true">
+                                    <tfoot>
                                     <tr>
                                         <td colspan="4" rowspan="3">&nbsp;</td>
                                         <td colspan="1">Total (Net)</td>
@@ -172,9 +172,6 @@ Number.prototype.format = function(n, x, s, c) {
                         </div>
                         <div class="pull-right">
                             <ul class="list-inline">
-                                <li><a href="javascript:void(0)" data-invoiceid="<%= invoice.id %>" id="resetMuch" class="btn btn-danger">Reset</a></li>
-                                <li><a href="javascript:void(0)" data-invoiceid="<%= invoice.id %>" id="saveMuch" class="btn btn-info">Save</a></li>
-                                <li><a href="javascript:void(0)" class="btn btn-success">Send</a></li>
                                 <li><button id="printMuch" class="btn btn-default mr-5"><i class="fa fa-print"></i> Download PDF</button></li>
                             </ul>
                         </div>

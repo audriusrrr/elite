@@ -13,13 +13,34 @@ module.exports = {
 		});
 	},
 	show: function(request, response) {
-	    var invoice = Invoice.findOne(request.param('id')).populate('orders');
-
+	    var invoice = Invoice.findOne(request.param('id'));
+	    var orders = Order.find({invoice: request.param('id')}).populate('company');
 	    Promise.props({
 	      invoice: invoice,
+	      orders: orders,
 	      title: 'admin-Invoice'
 	    }).then(function(result) {
 	      response.view('admin/invoice/show', result);
+	    });
+	},
+	complist: function(request, response) {
+		var invoices = Invoice.find({company: request.param('id')}).populate('orders');
+
+		Promise.props({
+		  invoices: invoices,
+		}).then(function(result) {
+		  response.view('company/invoices/list', {invoices: result.invoices, company: result.invoices[0].company, title: 'client-Invoices'});
+		});
+	},
+	compshow: function(request, response) {
+	    var invoice = Invoice.findOne(request.param('id'));
+	    var orders = Order.find({invoice: request.param('id')}).populate('company');
+	    Promise.props({
+	      invoice: invoice,
+	      orders: orders,
+	      title: 'client-Invoices'
+	    }).then(function(result) {
+	      response.view('company/invoices/show', {invoice: result.invoice, orders: result.orders, company: result.invoice.company, title: 'client-Invoices'});
 	    });
 	},
 };
