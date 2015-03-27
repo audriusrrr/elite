@@ -82,14 +82,14 @@
         <!--/ End category ui kit-->
 
         <!-- Start navigation - pages -->
-        <li class="submenu">
+        <li class="submenu <% if (title === 'admin-User') { %>active<% } %>">
             <a href="javascript:void(0);">
                 <span class="icon"><i class="fa fa-users"></i></span>
                 <span class="text">Register New User</span>
                 <span class="arrow"></span>
             </a>
             <ul>
-                <li><a href="register-admin.html">Register Admin</a></li>
+                <li><a href="/admin/user/">Register Admin</a></li>
             </ul>
         </li>
         <!--/ End navigation - pages -->

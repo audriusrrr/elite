@@ -46,7 +46,7 @@
     <link rel="stylesheet" href="/admin/css/plugins.css">
     <link rel="stylesheet" href="/admin/css/custom.css">
     <!--STYLES END-->
-
+<% if(title) { %>
   <% var curTitle = title; curTitle = curTitle.split('-'); curTitle = curTitle[0]; %>
     <% if(curTitle == 'admin') { %>
         <link rel="stylesheet" href="/admin/css/themes/default.theme.css">
@@ -57,6 +57,7 @@
     <% if(curTitle == 'client') { %>
         <link rel="stylesheet" href="/admin/css/themes/cyan.theme.css">
     <% } %>
+<% } %>
   </head>
 
   <body class="page-header-fixed page-sidebar-fixed page-sidebar-minimize">

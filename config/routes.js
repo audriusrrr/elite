@@ -33,8 +33,15 @@ module.exports.routes = {
   ***************************************************************************/
 
   '/': {
-    view: 'homepage'
+    view: 'signin'
   },
+
+  // USER
+  'get /admin/user': {
+    controller: 'UserController',
+    action: 'show'
+  },
+
 
   // CARS
 
