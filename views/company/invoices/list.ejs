@@ -44,7 +44,7 @@ Number.prototype.format = function(n, x, s, c) {
                                 var time = year + '-' + pad(month.toString(),2) + '-' + pad(date.toString(),2);
                             %>
                             <tr>
-                                <td class="text-center border-right"><a href="/company/invoice/<%= invoice.id %>">INV-<%= pad(invoice.id.toString(),4) %></a></td>
+                                <td class="text-center border-right"><a href="/company/invoice/<%= invoice.id %>">INV-<%= invoice.invoiceid %></a></td>
                                 <td>
                                 <%= time %>
                                 </td>

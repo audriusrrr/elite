@@ -41,6 +41,10 @@ module.exports.routes = {
     controller: 'UserController',
     action: 'show'
   },
+  'get /admin/user/create': {
+    controller: 'UserController',
+    action: 'create',
+  },
 
 
   // CARS

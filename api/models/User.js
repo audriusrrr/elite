@@ -7,8 +7,24 @@
 
 module.exports = {
 
-  attributes: {
+  schema: true,
 
+  attributes: {
+  	email: {
+  		required: true,
+  		type: 'email',
+  		unique: true,
+  	},
+  	encryptedPass: {
+  		type: 'string',
+  	}
+  },
+  beforeCreate: function(values, next) {
+  	require('bcrypt').hash(values.password, 10, function passwordEncrypted(err, encryptedPass) {
+  		if (err) return next(err);
+  		values.encryptedPass = encryptedPass;
+  		next();
+  	});
   }
 };
 

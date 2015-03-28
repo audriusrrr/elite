@@ -15,14 +15,21 @@ module.exports = {
 	      collection: 'order',
     	  via: 'invoice'
   		},
-  	  	price: {
-  	    	type: 'float',
-  	    	defaultsTo: 0,
-  	    	required: true
-  	  	},
-  	  	snapshot: {
-  	  		type: 'text'
-  	  	}
+  	  price: {
+  	   	type: 'float',
+  	   	defaultsTo: 0,
+  	   	required: true
+  	  },
+  	  snapshot: {
+  	  	type: 'text'
+  	  },
+      invoiceid: {
+        type: 'integer',
+        unique: true,
+        size: 4,
+        autoIncrement: true,
+
+      }
   	},
   	beforeCreate: function(values, next) {
         var aggprice = 0;

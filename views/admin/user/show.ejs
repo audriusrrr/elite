@@ -25,14 +25,14 @@
                         <div class="clearfix"></div>
                     </div><!-- /.panel-heading -->
                     <div class="panel-body no-padding rounded-bottom">
-                        <form action="#" class="form-horizontal form-bordered">
+                        <form action="/admin/user/create" class="form-horizontal form-bordered">
                             <div class="form-body">
 
 
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label">Email</label>
                                     <div class="col-sm-9">
-                                        <input class="form-control" type="text">
+                                        <input name="email" required class="form-control" type="email">
                                     </div>
                                 </div><!-- /.form-group -->
 
@@ -41,21 +41,14 @@
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label">Password</label>
                                     <div class="col-sm-9">
-                                        <input class="form-control" type="password">
-                                    </div>
-                                </div><!-- /.form-group -->
-
-                                <div class="form-group">
-                                    <label class="col-sm-3 control-label">Confirm Password</label>
-                                    <div class="col-sm-9">
-                                        <input class="form-control" type="password">
+                                        <input class="form-control" required name="password" type="password">
                                     </div>
                                 </div><!-- /.form-group -->
 
                             </div><!-- /.form-body -->
                             <div class="form-footer">
                                 <div class="pull-right">
-                                    <button class="btn btn-success" type="submit">Submit</button>
+                                    <input type="submit" class="btn btn-success" value="Submit" />
                                 </div>
                                 <div class="clearfix"></div>
                             </div><!-- /.form-footer -->

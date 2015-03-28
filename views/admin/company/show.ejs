@@ -207,7 +207,7 @@
                                         <tbody>
                                         <% _.each(invoices, function (invoice) { %>
                                         <tr>
-                                            <td class="text-center border-right"><a href="/admin/invoice/<%= invoice.id %>">INV-<%= pad(invoice.id.toString(),4) %></a></td>
+                                            <td class="text-center border-right"><a href="/admin/invoice/<%= invoice.id %>">INV-<%= invoice.invoiceid %></a></td>
                                             <td>
                                             <%
                                             var a = invoice.updatedAt;
