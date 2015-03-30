@@ -48,4 +48,42 @@ module.exports.policies = {
 		// before letting any users feed our rabbits
 		// feed : ['isNiceToAnimals', 'hasRabbitFood']
 	// }
+   '*': "authenticated",
+    UserController: {
+        "*": 'isAdmin',
+    },
+    SessionController: {
+        '*': true,
+    },
+    CarController: {
+      '*': 'isAdmin'
+    },
+    CompanyController: {
+      '*': 'isAdmin'
+    },
+    DriverController: {
+      '*': 'isAdmin'
+    },
+    InvoiceController: {
+      'show': 'isAdmin',
+      'create': 'isAdmin',
+      'complist': 'isCompany',
+      'compshow': 'isCompany'
+    },
+    OrderController: {
+      'list': 'isAdmin',
+      'dashboard': 'isAdmin',
+      'calendar': 'isAdmin',
+      'events': 'isAdmin',
+      'add': 'isAdmin',
+      'show': 'isAdmin',
+      'create': 'isAdmin',
+      'update': ['isAdmin', 'isDriver'],
+      'destroy': 'isAdmin',
+      'job': 'isDriver',
+      'jobs': 'isDriver',
+      'complist': 'isCompany',
+      'compshow': 'isCompany'
+    },
+
 };

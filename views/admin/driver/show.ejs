@@ -74,6 +74,7 @@
                             <div class="form-footer">
                                 <div class="pull-right">
                                     <a href="javascript:void();" class="btn btn-danger" data-toggle="modal" data-target=".ec-delete">delete</a>
+                                    <a href="javascript:void();" class="btn btn-warning" data-toggle="modal" data-target=".ec-update">Change Password</a>
                                     <input class="btn btn-success" type="submit" value="save" />
                                 </div>
                                 <div class="clearfix"></div>
@@ -150,12 +151,47 @@
 <!--/ END PAGE CONTENT -->
 
 <div class="modal fade ec-delete" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="panel panel-danger">
+                <div class="panel-heading">
+                    <div class="pull-left">
+                        <h3 class="panel-title">Delete this driver?</h3>
+                    </div>
+                    <div class="pull-right">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="panel-body no-padding rounded-bottom">
+                    <form action="/admin/driver/destroy/<%= driver.id %>" method="POST" class="form-horizontal form-bordered">
+                        <div class="form-body">
+                            <div class="gap-30"></div>
+                            <h4 class="text-center">Are you sure, you want to delete this driver? Data recovery will not be possible!</h4>
+                            <div class="gap-30"></div>
+                        </div><!-- /.form-body -->
+                        <div class="form-footer">
+                            <div class="pull-right">
+                                <button class="btn btn-success mr-5" data-dismiss="modal">Cancel</button>
+                                <input class="btn btn-danger" type="submit" value="Delete" />
+                            </div>
+                            <div class="clearfix"></div>
+                        </div><!-- /.form-footer -->
+                    </form>
+                </div><!-- /.panel-body -->
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!--/ End table in modal element -->
+
+<div class="modal fade ec-update" tabindex="-1" role="dialog" aria-hidden="true">
 <div class="modal-dialog modal-lg">
 <div class="modal-content">
-<div class="panel panel-danger">
+<div class="panel panel-warning">
 <div class="panel-heading">
     <div class="pull-left">
-        <h3 class="panel-title">Delete this driver?</h3>
+        <h3 class="panel-title">Change Password?</h3>
     </div>
     <div class="pull-right">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
@@ -163,22 +199,27 @@
     <div class="clearfix"></div>
 </div>
 <div class="panel-body no-padding rounded-bottom">
-    <form action="/admin/driver/destroy/<%= driver.id %>" method="POST" class="form-horizontal form-bordered">
+    <form action="/admin/driver/updatepass/<%= driver.id %>" method="POST" class="form-horizontal form-bordered">
         <!-- <input type="hidden" name="_method" value="delete" /> -->
         <div class="form-body">
             <div class="gap-30"></div>
-            <h4 class="text-center">Are you sure, you want to delete this driver? Data recovery will not be possible!</h4>
+            <div class="form-group">
+                <div class="col-sm-12">
+                    <input class="form-control" placeholder="Password" name="password" type="password" required>
+                </div>
+            </div><!-- /.form-group -->
             <div class="gap-30"></div>
         </div><!-- /.form-body -->
         <div class="form-footer">
             <div class="pull-right">
-                <button class="btn btn-success mr-5" data-dismiss="modal">Cancel</button>
-                <input class="btn btn-danger" type="submit" value="Delete" />
+                <button class="btn btn-danger mr-5" data-dismiss="modal">Cancel</button>
+                <input class="btn btn-warning" type="submit" value="Change Password" />
             </div>
             <div class="clearfix"></div>
         </div><!-- /.form-footer -->
     </form>
 </div><!-- /.panel-body -->
+</div>
 </div><!-- /.modal-content -->
 </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->

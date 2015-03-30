@@ -20,9 +20,8 @@
     <ul class="sidebar-menu">
 
         <!-- Start navigation - dashboard -->
-        <% if(company.id) {var compid = company.id} else {var compid = company} %>
         <li class="<% if (title === 'client-Orders') { %>active<% } %>">
-            <a href="/company/orders/<%= compid %>">
+            <a href="/company/orders/">
                 <span class="icon"><i class="fa fa-book"></i></span>
                 <span class="text">Orders</span>
                 <span class="selected"></span>
@@ -32,7 +31,7 @@
 
         <!-- Start navigation - statistics -->
         <li class="<% if (title === 'client-Invoices') { %>active<% } %>">
-            <a href="/company/invoices/<%= compid %>">
+            <a href="/company/invoices/">
                 <span class="icon"><i class="fa fa-file-text"></i></span>
                 <span class="text">Invoices</span>
             </a>

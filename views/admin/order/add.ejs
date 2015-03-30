@@ -28,7 +28,7 @@
                             <div class="form-group">
                             <label class="col-sm-3 control-label">Client Company</label>
                             <div class="col-sm-9">
-                            <select name="company" data-placeholder="Choose a Company" class="chosen-select mb-15" tabindex="2">
+                            <select name="company" required data-placeholder="Choose a Company" class="chosen-select mb-15" tabindex="2">
                             <% _.each(companies, function (company) { %>
                                 <option value="<%= company.id %>"><%= company.title %></option>
                             <% }) %>
@@ -39,7 +39,7 @@
                             <div class="form-group">
                             <label class="col-sm-3 control-label">Rate type</label>
                             <div class="col-sm-9">
-                            <select name="ratetype" data-placeholder="Choose a Company" class="chosen-select mb-15" tabindex="2">
+                            <select name="ratetype" required data-placeholder="Choose a Company" class="chosen-select mb-15" tabindex="2">
                                 <option value="hrate">Hourly Rate</option>
                                 <option value="drate">Daily Rate</option>
                                 <option value="horate">Driver only Hourly Rate</option>
@@ -59,7 +59,7 @@
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label">Driver</label>
                                     <div class="col-sm-9">
-                                    <select name="driver" data-placeholder="Choose a Driver" class="chosen-select mb-15" tabindex="2">
+                                    <select name="driver" required data-placeholder="Choose a Driver" class="chosen-select mb-15" tabindex="2">
                                     <% _.each(drivers, function (driver) { %>
                                         <option value="<%= driver.id %>"><%= driver.fname %> <%= driver.lname %></option>
                                     <% }) %>
@@ -70,7 +70,7 @@
                             <div class="form-group">
                                     <label class="col-sm-3 control-label">Car (reg number)</label>
                                     <div class="col-sm-9">
-                                    <select name="car" data-placeholder="Choose a Car" class="chosen-select mb-15" tabindex="2">
+                                    <select name="car" required data-placeholder="Choose a Car" class="chosen-select mb-15" tabindex="2">
                                     <% _.each(cars, function (car) { %>
                                         <option value="<%= car.id %>"><%= car.regnr %> - <%= car.model %></option>
                                     <% }) %>
@@ -83,7 +83,7 @@
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label">Pickup Location</label>
                                     <div class="col-sm-9">
-                                        <input name="pickuplocation" class="form-control" type="text">
+                                        <input name="pickuplocation" required class="form-control" type="text">
                                     </div>
                                 </div><!-- /.form-group -->
 
@@ -98,20 +98,20 @@
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label">Final Destination</label>
                                     <div class="col-sm-9">
-                                        <input name="finaldestination" class="form-control" type="text">
+                                        <input name="finaldestination" required class="form-control" type="text">
                                     </div>
                                 </div><!-- /.form-group -->
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label">Pickup date</label>
                                     <div class="col-sm-9">
-                                        <input name="pickupdate" type="text" class="form-control" value="" data-date-format="yyyy/mm/dd" id="dp2">
+                                        <input name="pickupdate" required type="text" class="form-control" value="" data-date-format="yyyy/mm/dd" id="dp2">
                                     </div>
                                 </div><!-- /.form-group -->
 
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label">Pickup time</label>
                                     <div class="col-sm-9">
-                                        <input name="pickuptime" class="form-control" type="text">
+                                        <input name="pickuptime" required class="form-control" type="text">
                                     </div>
                                 </div><!-- /.form-group -->
 
@@ -153,7 +153,7 @@
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label">First Name</label>
                                     <div class="col-sm-9">
-                                        <input name="clientfname" class="form-control" type="text">
+                                        <input name="clientfname" required class="form-control" type="text">
                                     </div>
                                 </div><!-- /.form-group -->
 
@@ -161,7 +161,7 @@
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label">Last Name</label>
                                     <div class="col-sm-9">
-                                        <input name="clientlname" class="form-control" type="text">
+                                        <input name="clientlname" required class="form-control" type="text">
                                     </div>
                                 </div><!-- /.form-group -->
 

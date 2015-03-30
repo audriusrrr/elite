@@ -77,18 +77,14 @@
         </li>
         <!--/ End category ui kit-->
 
-        <!-- Start navigation - pages -->
-        <li class="submenu <% if (title === 'admin-User') { %>active<% } %>">
-            <a href="javascript:void(0);">
+        <!-- Start navigation - orders -->
+        <li class="<% if (title === 'admin-User') { %>active<% } %>">
+            <a href="/admin/users/">
                 <span class="icon"><i class="fa fa-users"></i></span>
-                <span class="text">Register New User</span>
-                <span class="arrow"></span>
+                <span class="text">All Admins</span>
             </a>
-            <ul>
-                <li><a href="/admin/user/">Register Admin</a></li>
-            </ul>
         </li>
-        <!--/ End navigation - pages -->
+        <!--/ End navigation - orders -->
 
 
     </ul><!-- /.sidebar-menu -->

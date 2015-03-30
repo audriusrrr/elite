@@ -6,7 +6,7 @@
 */
 
 module.exports = {
-
+  schema: true,
   attributes: {
   	fname: {
   	    type: 'STRING',
@@ -23,7 +23,29 @@ module.exports = {
   	phone: {
   	    type: 'STRING',
   	    required: true
-  	}
+  	},
+    encryptedPass: {
+      type: 'string',
+    },
+    role: {
+        type: 'string',
+        defaultsTo: 'driver'
+    }
+  },
+  beforeCreate: function(values, next) {
+    require('bcrypt').hash(values.password, 10, function passwordEncrypted(err, encryptedPass) {
+      if (err) return next(err);
+      values.encryptedPass = encryptedPass;
+      next();
+    });
+  },
+  beforeValidate: function(values, next) {
+    console.log('before update');
+    require('bcrypt').hash(values.password, 10, function passwordEncrypted(err, encryptedPass) {
+      if (err) return next(err);
+      values.encryptedPass = encryptedPass;
+      next();
+    });
   }
 };
 

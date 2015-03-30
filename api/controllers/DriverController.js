@@ -48,6 +48,16 @@ module.exports = {
 			res.redirect('admin/driver/' + req.param('id'));
 		});
 	},
+	updatePass: function(req, res, next) {
+		Driver.update(req.param('id'), req.params.all(), function driverUpdated (err) {
+			if (err) {
+				return res.redirect('admin/driver/' + req.param('id'));
+				console.log('error');
+			}
+
+			res.redirect('admin/driver/' + req.param('id'));
+		});
+	},
 	destroy: function(req, res, next) {
 		Driver.findOne(req.param('id'), function foundDriver (err, driver) {
 			if (err) return next(err);

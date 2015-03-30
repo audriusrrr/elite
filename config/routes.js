@@ -33,17 +33,80 @@ module.exports.routes = {
   ***************************************************************************/
 
   '/': {
-    view: 'signin'
+    view: 'homepage',
+  },
+
+  'get /admin': {
+    controller: 'SessionController',
+    action: 'login'
+  },
+
+  'post /admin': {
+    controller: 'SessionController',
+    action: 'process'
+  },
+
+  'get /driver': {
+    controller: 'SessionController',
+    action: 'dlogin'
+  },
+
+  'post /driver': {
+    controller: 'SessionController',
+    action: 'dprocess'
+  },
+  'get /company': {
+    controller: 'SessionController',
+    action: 'clogin'
+  },
+
+  'post /company': {
+    controller: 'SessionController',
+    action: 'cprocess'
+  },
+
+  'get /logout': {
+    controller: 'SessionController',
+    action: 'logout'
+  },
+  'get /logoutc': {
+    controller: 'SessionController',
+    action: 'logoutc'
+  },
+  'get /logoutd': {
+    controller: 'SessionController',
+    action: 'logoutd'
   },
 
   // USER
-  'get /admin/user': {
+  // 'get /admin/user': {
+  //   controller: 'UserController',
+  //   action: 'show'
+  // },
+  // 'get /admin/user/create': {
+  //   controller: 'UserController',
+  //   action: 'create',
+  // },
+
+  'get /admin/users': {
+    controller: 'UserController',
+    action: 'list'
+  },
+  'get /admin/user/:id': {
     controller: 'UserController',
     action: 'show'
   },
-  'get /admin/user/create': {
+  'get /admin/users/create': {
     controller: 'UserController',
     action: 'create',
+  },
+  'post /admin/user/update/:id': {
+    controller: 'UserController',
+    action: 'update',
+  },
+  'post /admin/user/destroy/:id': {
+    controller: 'UserController',
+    action: 'destroy',
   },
 
 
@@ -87,6 +150,10 @@ module.exports.routes = {
     controller: 'DriverController',
     action: 'update',
   },
+  'post /admin/driver/updatepass/:id': {
+    controller: 'DriverController',
+    action: 'updatePass',
+  },
   'post /admin/driver/destroy/:id': {
     controller: 'DriverController',
     action: 'destroy',
@@ -104,6 +171,10 @@ module.exports.routes = {
   'get /admin/companies/create': {
     controller: 'CompanyController',
     action: 'create',
+  },
+  'post /admin/company/updatepass/:id': {
+    controller: 'CompanyController',
+    action: 'updatePass',
   },
   'post /admin/company/update/:id': {
     controller: 'CompanyController',
@@ -166,7 +237,7 @@ module.exports.routes = {
 // DRIVER AREA
 
 // JOBS
-'get /driver/jobs/:id': {
+'get /driver/jobs/': {
   controller: 'OrderController',
   action: 'jobs'
 },
@@ -179,7 +250,7 @@ module.exports.routes = {
 // CLIENT AREA
 
 // DASHBOARD
-'get /company/orders/:id': {
+'get /company/orders/': {
   controller: 'OrderController',
   action: 'complist'
 },
@@ -187,7 +258,7 @@ module.exports.routes = {
   controller: 'OrderController',
   action: 'compshow'
 },
-'get /company/invoices/:id': {
+'get /company/invoices/': {
   controller: 'InvoiceController',
   action: 'complist'
 },

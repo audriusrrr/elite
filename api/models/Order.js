@@ -4,9 +4,9 @@
 * @description :: TODO: You might write a short summary of how this model works and what it represents here.
 * @docs        :: http://sailsjs.org/#!documentation/models
 */
-
+var Promise = require("bluebird");
 module.exports = {
-
+  schema: true,
   attributes: {
     company: {
   	    model:'company',
@@ -73,9 +73,6 @@ module.exports = {
     },
     orderid: {
       type: 'integer',
-      unique: true,
-      size: 6,
-      autoIncrement: true,
     },
     timelogged: {
       type: 'integer',
@@ -90,10 +87,18 @@ module.exports = {
     },
   },
   beforeCreate: function(values, next) {
-        newDate = new Date(values.pickupdate + ' ' + values.pickuptime + ':00');
-        var unixtime = Date.parse(newDate)/1000;
-        values.ordertime = unixtime;
-        next();
+        var orders = Order.count();
+        var orderids = Order.find();
+        Promise.props({
+          orders: orders,
+          orderids: orderids
+        }).then(function(result) {
+            values.orderid = 100000 + result.orders;
+            newDate = new Date(values.pickupdate + ' ' + values.pickuptime + ':00');
+            var unixtime = Date.parse(newDate)/1000;
+            values.ordertime = unixtime;
+            next();
+        });
   },
   beforeUpdate: function(values, next) {
         newDate = new Date(values.pickupdate + ' ' + values.pickuptime + ':00');

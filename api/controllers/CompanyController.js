@@ -61,5 +61,15 @@ module.exports = {
 			res.redirect('admin/companies');
 		});
 	},
+	updatePass: function(req, res, next) {
+		Company.update(req.param('id'), req.params.all(), function companyUpdated (err) {
+			if (err) {
+				return res.redirect('admin/company/' + req.param('id'));
+				console.log('error');
+			}
+
+			res.redirect('admin/company/' + req.param('id'));
+		});
+	},
 };
 

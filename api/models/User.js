@@ -17,14 +17,26 @@ module.exports = {
   	},
   	encryptedPass: {
   		type: 'string',
-  	}
+  	},
+    role: {
+        type: 'string',
+        defaultsTo: 'admin'
+    },
   },
   beforeCreate: function(values, next) {
-  	require('bcrypt').hash(values.password, 10, function passwordEncrypted(err, encryptedPass) {
-  		if (err) return next(err);
-  		values.encryptedPass = encryptedPass;
-  		next();
-  	});
+    require('bcrypt').hash(values.password, 10, function passwordEncrypted(err, encryptedPass) {
+      if (err) return next(err);
+      values.encryptedPass = encryptedPass;
+      next();
+    });
+  },
+  beforeValidate: function(values, next) {
+    console.log('before update');
+    require('bcrypt').hash(values.password, 10, function passwordEncrypted(err, encryptedPass) {
+      if (err) return next(err);
+      values.encryptedPass = encryptedPass;
+      next();
+    });
   }
 };
 

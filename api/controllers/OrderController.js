@@ -5,7 +5,7 @@
  * @help        :: See http://links.sailsjs.org/docs/controllers
  */
 
-var Promise = require("bluebird");
+var  Promise = require("bluebird");
 module.exports = {
 	list: function(request, response) {
 		var orders = Order
@@ -154,9 +154,9 @@ module.exports = {
 	},
 	jobs: function(request, response) {
 		var orders = Order
-			.find({driver: request.param('id')})
+			.find({driver: request.session.passport.user.id})
 			.populate('company').populate('car');
-		var driver = Driver.findOne(request.param('id'));
+		var driver = Driver.findOne(request.session.passport.user.id);
 
 		Promise.props({
 		  orders: orders,
@@ -167,7 +167,7 @@ module.exports = {
 		});
 	},
 	job: function(request, response) {
-		var order = Order.findOne(request.param('id')).populate('company').populate('driver').populate('car');
+		var order = Order.findOne({id: request.param('id'), driver: request.session.passport.user.id}).populate('company').populate('driver').populate('car');
 		Promise.props({
 		  order: order,
 		  title: 'driver-Job'
@@ -177,9 +177,10 @@ module.exports = {
 	},
 	complist: function(request, response) {
 		var orders = Order
-			.find({company: request.param('id')})
+			.find({company: request.session.passport.user.id})
 			.populate('driver').populate('car');
-		var company = Company.findOne(request.param('id'));
+		var company = Company.findOne(request.session.passport.user.id);
+		console.log(request.session.passport.user);
 
 		Promise.props({
 		  orders: orders,
@@ -190,14 +191,14 @@ module.exports = {
 		});
 	},
 	compshow: function(request, response) {
-		var order = Order.findOne(request.param('id')).populate('company').populate('driver').populate('car');
+		var order = Order.findOne({id: request.param('id'), company: request.session.passport.user.id}).populate('company').populate('driver').populate('car');
 		Promise.props({
 		  order: order,
 		}).then(function(result) {
 		  var order = result.order;
 		  return order;
 		}).then(function(order) {
-			response.view('company/orders/show', {order: order, company: order.company, title: 'client-Orders'});
+			response.view('company/orders/show', {order: order, company: request.session.passport.user.id, title: 'client-Orders'});
 		});
 	},
 };
