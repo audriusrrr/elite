@@ -74,54 +74,68 @@
 <div class="panel-body no-padding rounded-bottom">
     <form action="/admin/companies/create/" class="form-horizontal form-bordered">
         <div class="form-body">
-            <div class="form-group">
-                <div class="col-sm-12">
-                    <input class="form-control" name="title" placeholder="Company Name" type="text">
-                </div>
-            </div><!-- /.form-group -->
-            <div class="form-group">
-                <div class="col-sm-12">
-                    <input class="form-control" name="responsible" placeholder="Responsible Person" type="text">
-                </div>
-            </div><!-- /.form-group -->
-            <div class="form-group">
-                <div class="col-sm-12">
-                    <input class="form-control" name="email" placeholder="Email" type="text">
-                </div>
-            </div><!-- /.form-group -->
-            <div class="form-group">
-                <div class="col-sm-12">
-                    <input class="form-control" name="phone" placeholder="Phone" type="text">
-                </div>
-            </div><!-- /.form-group -->
-            <div class="form-group">
-                <div class="col-sm-12">
-                    <input class="form-control" name="hrate" placeholder="Hourly Rate" type="text">
-                </div>
-            </div><!-- /.form-group -->
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        <input class="form-control" required name="title" placeholder="Company Name" type="text">
+                    </div>
+                </div><!-- /.form-group -->
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        <input class="form-control" required name="responsible" placeholder="Responsible Person" type="text">
+                    </div>
+                </div><!-- /.form-group -->
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        <input class="form-control" required name="phone" placeholder="Phone" type="text">
+                    </div>
+                </div><!-- /.form-group -->
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        <input class="form-control" required name="address1" placeholder="1st Address line" type="text">
+                    </div>
+                </div><!-- /.form-group -->
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        <input class="form-control" required name="address2" placeholder="2nd Address line" type="text">
+                    </div>
+                </div><!-- /.form-group -->
+            </div><!-- end of col -->
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        <input class="form-control" required name="hrate" placeholder="Hourly Rate" type="text">
+                    </div>
+                </div><!-- /.form-group -->
 
-            <div class="form-group">
-                <div class="col-sm-12">
-                    <input class="form-control" name="drate" placeholder="Daily Rate" type="text">
-                </div>
-            </div><!-- /.form-group -->
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        <input class="form-control" required name="drate" placeholder="Daily Rate" type="text">
+                    </div>
+                </div><!-- /.form-group -->
 
-            <div class="form-group">
-                <div class="col-sm-12">
-                    <input class="form-control" name="horate" placeholder="Driver only Hourly Rate" type="text">
-                </div>
-            </div><!-- /.form-group -->
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        <input class="form-control" required name="horate" placeholder="Driver only Hourly Rate" type="text">
+                    </div>
+                </div><!-- /.form-group -->
 
-            <div class="form-group">
-                <div class="col-sm-12">
-                    <input class="form-control" name="dorate" placeholder="Driver only Daily Rate" type="text">
-                </div>
-            </div><!-- /.form-group -->
-            <div class="form-group">
-                <div class="col-sm-12">
-                    <input class="form-control" name="password" placeholder="Password" type="password">
-                </div>
-            </div><!-- /.form-group -->
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        <input class="form-control" required name="dorate" placeholder="Driver only Daily Rate" type="text">
+                    </div>
+                </div><!-- /.form-group -->
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        <input class="form-control" required name="email" placeholder="Email" type="text">
+                    </div>
+                </div><!-- /.form-group -->
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        <input class="form-control" required name="password" placeholder="Password" type="password">
+                    </div>
+                </div><!-- /.form-group -->
+            </div><!-- end of col -->
         </div><!-- /.form-body -->
         <div class="form-footer">
             <div class="pull-right">

@@ -61,3 +61,11 @@
     }
 
 }
+#cal-day-box .day-event {height: auto !important;}
+label.error {
+  position: absolute;
+  background: red;
+  top: 0px;
+  left: 0;
+  text-indent: -9999px;
+}

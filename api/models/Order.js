@@ -65,7 +65,8 @@ module.exports = {
   	status: {
   		type: 'string',
   		required: true,
-  		defaultsTo: 'not started'
+  		defaultsTo: 'not started',
+      enum: ['not started', 'in progress', 'did not show up', 'delivered', 'invoiced']
   	},
     ordertime: {
       type: 'integer',
@@ -102,9 +103,17 @@ module.exports = {
   },
   beforeUpdate: function(values, next) {
         newDate = new Date(values.pickupdate + ' ' + values.pickuptime + ':00');
-        var unixtime = Date.parse(newDate)/1000;
-        values.ordertime = unixtime;
+        Promise.props({
+          newDate: newDate
+        }).then(function(result){
+          if(typeof values.pickupdate != 'undefined' &&  typeof values.pickuptime != 'undefined') {
+            console.log(values.pickuptime);
+            var unixtime = Date.parse(result.newDate)/1000;
+            values.ordertime = unixtime;
+          }
         next();
+
+        });
     }
 };
 

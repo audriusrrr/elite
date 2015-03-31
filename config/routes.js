@@ -96,7 +96,7 @@ module.exports.routes = {
     controller: 'UserController',
     action: 'show'
   },
-  'get /admin/users/create': {
+  'get /admin/users/create/': {
     controller: 'UserController',
     action: 'create',
   },

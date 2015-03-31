@@ -31,92 +31,6 @@
                     </ul><!-- /.list-unstyled -->
                 </div><!-- /.panel-body -->
             </div>
-            <!-- Start input fields - horizontal form -->
-                <div class="panel rounded shadow">
-                    <div class="panel-heading">
-                        <div class="pull-left">
-                            <h3 class="panel-title">Company Details</h3>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div><!-- /.panel-heading -->
-                    <div class="panel-body no-padding rounded-bottom">
-                        <form action="/admin/company/update/<%= company.id %>" method="POST" class="form-horizontal form-bordered">
-                            <div class="form-body">
-
-                                <div class="form-group">
-                                    <div class="col-sm-12">
-                                        <div class="input-group">
-                                            <div class="input-group-addon">£</div>
-                                            <input class="form-control" name="hrate" placeholder="Hourly Rate" type="text" value="<%= company.hrate %>">
-                                            <div class="input-group-addon">/hour</div>
-                                        </div>
-                                    </div>
-                                </div><!-- /.form-group -->
-
-                                <div class="form-group">
-                                    <div class="col-sm-12">
-                                        <div class="input-group">
-                                            <div class="input-group-addon">£</div>
-                                            <input class="form-control" name="drate" placeholder="Daily Rate" type="text" value="<%= company.drate %>">
-                                            <div class="input-group-addon">/day</div>
-                                        </div>
-                                    </div>
-                                </div><!-- /.form-group -->
-
-                                <div class="form-group">
-                                    <div class="col-sm-12">
-                                        <div class="input-group">
-                                            <div class="input-group-addon">£</div>
-                                            <input class="form-control" name="horate" placeholder="Driver only Rate" type="text" value="<%= company.horate %>">
-                                            <div class="input-group-addon">/hour driver only</div>
-                                        </div>
-                                    </div>
-                                </div><!-- /.form-group -->
-
-                                <div class="form-group">
-                                    <div class="col-sm-12">
-                                        <div class="input-group">
-                                            <div class="input-group-addon">£</div>
-                                            <input class="form-control" name="dorate" placeholder="Driver only Rate" type="text" value="<%= company.dorate %>">
-                                            <div class="input-group-addon">/day driver only</div>
-                                        </div>
-                                    </div>
-                                </div><!-- /.form-group -->
-
-                                <div class="form-group">
-                                    <div class="col-sm-12">
-                                        <input class="form-control" name="title" placeholder="Company Name" type="text" value="<%= company.title %>">
-                                    </div>
-                                </div><!-- /.form-group -->
-                                <div class="form-group">
-                                    <div class="col-sm-12">
-                                        <input class="form-control" name="responsible" placeholder="Responsible Person" type="text" value="<%= company.responsible %>">
-                                    </div>
-                                </div><!-- /.form-group -->
-                                <div class="form-group">
-                                    <div class="col-sm-12">
-                                        <input class="form-control" name="email" placeholder="Email" type="text" value="<%= company.email %>">
-                                    </div>
-                                </div><!-- /.form-group -->
-                                <div class="form-group">
-                                    <div class="col-sm-12">
-                                        <input class="form-control" name="phone" placeholder="Phone" type="text" value="<%= company.phone %>">
-                                    </div>
-                                </div><!-- /.form-group -->
-
-                            </div><!-- /.form-body -->
-                            <div class="form-footer">
-                                <div class="pull-right">
-                                    <a href="javascript:void();" class="btn btn-danger" data-toggle="modal" data-target=".ec-delete">delete</a>
-                                    <a href="javascript:void();" class="btn btn-warning" data-toggle="modal" data-target=".ec-update">Change Password</a>
-                                    <input class="btn btn-success" type="submit" value="save" />
-                                </div>
-                                <div class="clearfix"></div>
-                            </div><!-- /.form-footer -->
-                        </form>
-                    </div><!-- /.panel-body -->
-                </div><!-- /.panel -->
-                <!--/ End input fields - horizontal form -->
         </div>
         <div class="col-lg-9 col-md-9 col-sm-8">
 
@@ -145,7 +59,11 @@
                             </ul>
                         </div>
                         <div class="pull-right inner-client-button2">
-                            <button class="btn btn-theme" data-toggle="modal" data-target=".ec-invoices">Generate Invoice</button>
+                            <% var ordercount = 0;
+                            _.each(orders, function (order) { %>
+                                <% if(order.status == 'delivered'){ordercount++;}%>
+                            <% }) %>
+                            <button class="btn btn-theme" data-toggle="modal" <% if(ordercount == 0) { %> disabled <% } %> data-target=".ec-invoices">Generate Invoice</button>
                             <a href="#" class="btn btn-info">EXPORT CSV</a>
                         </div>
                         <div class="clearfix"></div>
@@ -242,6 +160,105 @@
                         </div><!-- end of tab-content -->
                     </div><!-- /.panel-body -->
                 </div><!-- /.panel -->
+
+                <div class="panel rounded shadow">
+                    <div class="panel-heading">
+                        <div class="pull-left">
+                            <h3 class="panel-title">Company Details</h3>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div><!-- /.panel-heading -->
+                    <div class="panel-body no-padding rounded-bottom">
+                        <form action="/admin/company/update/<%= company.id %>" method="POST" class="form-horizontal form-bordered">
+                            <div class="form-body">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <div class="col-sm-12">
+                                            <div class="input-group">
+                                                <div class="input-group-addon">£</div>
+                                                <input class="form-control" name="hrate" placeholder="Hourly Rate" type="text" value="<%= company.hrate %>">
+                                                <div class="input-group-addon">/hour</div>
+                                            </div>
+                                        </div>
+                                    </div><!-- /.form-group -->
+
+                                    <div class="form-group">
+                                        <div class="col-sm-12">
+                                            <div class="input-group">
+                                                <div class="input-group-addon">£</div>
+                                                <input class="form-control" name="drate" placeholder="Daily Rate" type="text" value="<%= company.drate %>">
+                                                <div class="input-group-addon">/day</div>
+                                            </div>
+                                        </div>
+                                    </div><!-- /.form-group -->
+
+                                    <div class="form-group">
+                                        <div class="col-sm-12">
+                                            <div class="input-group">
+                                                <div class="input-group-addon">£</div>
+                                                <input class="form-control" name="horate" placeholder="Driver only Rate" type="text" value="<%= company.horate %>">
+                                                <div class="input-group-addon">/hour driver only</div>
+                                            </div>
+                                        </div>
+                                    </div><!-- /.form-group -->
+
+                                    <div class="form-group">
+                                        <div class="col-sm-12">
+                                            <div class="input-group">
+                                                <div class="input-group-addon">£</div>
+                                                <input class="form-control" name="dorate" placeholder="Driver only Rate" type="text" value="<%= company.dorate %>">
+                                                <div class="input-group-addon">/day driver only</div>
+                                            </div>
+                                        </div>
+                                    </div><!-- /.form-group -->
+
+                                    <div class="form-group">
+                                        <div class="col-sm-12">
+                                            <input class="form-control" name="address1" placeholder="1st Address line" type="text" value="<%= company.address1 %>">
+                                        </div>
+                                    </div><!-- /.form-group -->
+
+                                </div><!-- end of col -->
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <div class="col-sm-12">
+                                            <input class="form-control" required name="title" placeholder="Company Name" type="text" value="<%= company.title %>">
+                                        </div>
+                                    </div><!-- /.form-group -->
+                                    <div class="form-group">
+                                        <div class="col-sm-12">
+                                            <input class="form-control" required name="responsible" placeholder="Responsible Person" type="text" value="<%= company.responsible %>">
+                                        </div>
+                                    </div><!-- /.form-group -->
+                                    <div class="form-group">
+                                        <div class="col-sm-12">
+                                            <input class="form-control" required name="email" placeholder="Email" type="text" value="<%= company.email %>">
+                                        </div>
+                                    </div><!-- /.form-group -->
+                                    <div class="form-group">
+                                        <div class="col-sm-12">
+                                            <input class="form-control" required name="phone" placeholder="Phone" type="text" value="<%= company.phone %>">
+                                        </div>
+                                    </div><!-- /.form-group -->
+                                    <div class="form-group">
+                                        <div class="col-sm-12">
+                                            <input class="form-control" name="address2" placeholder="2nd Address line" type="text" value="<%= company.address2 %>">
+                                        </div>
+                                    </div><!-- /.form-group -->
+                                </div><!-- end of col -->
+
+                            </div><!-- /.form-body -->
+                            <div class="form-footer">
+                                <div class="pull-right">
+                                    <a href="javascript:void();" class="btn btn-danger" data-toggle="modal" data-target=".ec-delete">delete</a>
+                                    <a href="javascript:void();" class="btn btn-warning" data-toggle="modal" data-target=".ec-update">Change Password</a>
+                                    <input class="btn btn-success" type="submit" value="save" />
+                                </div>
+                                <div class="clearfix"></div>
+                            </div><!-- /.form-footer -->
+                        </form>
+                    </div><!-- /.panel-body -->
+            </div><!-- /.panel -->
             </div>
         </div><!-- /.row -->
 
@@ -289,7 +306,7 @@
 <!-- Start table in modal element -->
 <div class="modal fade ec-invoices" tabindex="-1" role="dialog" aria-hidden="true">
 <div class="modal-dialog modal-lg">
-<form action="/admin/invoices/create">
+<form action="/admin/invoices/create" id="checkbox-validate">
 <div class="modal-content">
 <div class="panel panel-success">
 <div class="panel-heading">
@@ -336,7 +353,7 @@
         <tr>
             <td>
                 <div class="ckbox ckbox-theme">
-                    <input id="checkbox-unchecked<%= order.id %>" name="orders" value="<%= order.id %>" type="checkbox">
+                    <input data-pushed="notpushed" id="checkbox-unchecked<%= order.id %>" name="orders" value="<%= order.id %>" type="checkbox">
                     <label for="checkbox-unchecked<%= order.id %>"></label>
                 </div>
             </td>
@@ -379,7 +396,7 @@
 <div class="modal-footer">
     <ul class="list-inline">
 
-        <li><input type="submit" class="btn btn-success" value="Generate Invoice" /></li>
+        <li><input type="submit" id="geninvsub" class="btn btn-success" disabled value="Generate Invoice" /></li>
     </ul>
 </div>
 </div><!-- /.modal-content -->

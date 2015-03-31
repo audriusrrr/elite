@@ -167,7 +167,7 @@
                             <div class="form-group">
                             <label class="col-sm-3 control-label">Client Company</label>
                             <div class="col-sm-9">
-                            <select name="company" data-placeholder="Choose a Company" class="chosen-select mb-15" tabindex="2">
+                            <select name="company" required data-placeholder="Choose a Company" class="chosen-select mb-15" tabindex="2">
                             <option value="<%= order.company.id %>"><%= order.company.title %></option>
                             <% _.each(companies, function (company) { %>
                                 <% if(company.id != order.company.id) { %>
@@ -189,7 +189,7 @@
                             if (type == 'horate') {text = 'Driver only Hourly Rate';}
                             if (type == 'dorate') {text = 'Driver only Daily Rate';}
                             %>
-                            <select name="ratetype" data-placeholder="Choose a Company" class="chosen-select mb-15" tabindex="2">
+                            <select name="ratetype" required data-placeholder="Choose a Company" class="chosen-select mb-15" tabindex="2">
                                 <option value="<%= order.ratetype %>"><%= text %></option>
                                 <% if (type != 'hrate' ) { %>
                                 <option value="hrate">Hourly Rate</option>
@@ -215,7 +215,7 @@
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label">First Name</label>
                                     <div class="col-sm-9">
-                                        <input name="clientfname" class="form-control" type="text" value="<%= order.clientfname %>">
+                                        <input name="clientfname" required class="form-control" type="text" value="<%= order.clientfname %>">
                                     </div>
                                 </div><!-- /.form-group -->
 
@@ -223,7 +223,7 @@
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label">Last Name</label>
                                     <div class="col-sm-9">
-                                        <input name="clientlname" class="form-control" type="text" value="<%= order.clientlname %>">
+                                        <input name="clientlname" required class="form-control" type="text" value="<%= order.clientlname %>">
                                     </div>
                                 </div><!-- /.form-group -->
 
@@ -246,7 +246,7 @@
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label">Driver</label>
                                     <div class="col-sm-9">
-                                    <select name="driver" data-placeholder="Choose a Driver" class="chosen-select mb-15" tabindex="2">
+                                    <select name="driver" required data-placeholder="Choose a Driver" class="chosen-select mb-15" tabindex="2">
                                     <option value="<%= order.driver.id %>"><%= order.driver.fname %> <%= order.driver.lname %></option>
                                     <% _.each(drivers, function (driver) { %>
                                         <% if(driver.id != order.driver.id) { %>
@@ -260,7 +260,7 @@
                             <div class="form-group">
                                     <label class="col-sm-3 control-label">Car</label>
                                     <div class="col-sm-9">
-                                    <select name="car" data-placeholder="Choose a Car" class="chosen-select mb-15" tabindex="2">
+                                    <select name="car" required data-placeholder="Choose a Car" class="chosen-select mb-15" tabindex="2">
                                     <option value="<%= order.car.id %>"><%= order.car.regnr %> - <%= order.car.model %></option>
                                     <% _.each(cars, function (car) { %>
                                         <% if(car.id != order.car.id) { %>
@@ -276,7 +276,7 @@
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label">Pickup Location</label>
                                     <div class="col-sm-9">
-                                        <input name="pickuplocation" class="form-control" type="text" value="<%= order.pickuplocation %>">
+                                        <input name="pickuplocation" required class="form-control" type="text" value="<%= order.pickuplocation %>">
                                     </div>
                                 </div><!-- /.form-group -->
 
@@ -291,20 +291,20 @@
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label">Final Destination</label>
                                     <div class="col-sm-9">
-                                        <input name="finaldestination" class="form-control" type="text" value="<%= order.finaldestination %>">
+                                        <input name="finaldestination" required class="form-control" type="text" value="<%= order.finaldestination %>">
                                     </div>
                                 </div><!-- /.form-group -->
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label">Pickup date</label>
                                     <div class="col-sm-9">
-                                        <input name="pickupdate" type="text" class="form-control" value="<%= order.pickupdate %>" data-date-format="yyyy/mm/dd" id="dp2">
+                                        <input name="pickupdate" required type="text" class="form-control" value="<%= order.pickupdate %>" data-date-format="yyyy/mm/dd" id="dp2">
                                     </div>
                                 </div><!-- /.form-group -->
 
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label">Pickup time</label>
                                     <div class="col-sm-9">
-                                        <input name="pickuptime" class="form-control" type="text" value="<%= order.pickuptime %>">
+                                        <input name="pickuptime" required class="form-control" type="time" value="<%= order.pickuptime %>">
                                     </div>
                                 </div><!-- /.form-group -->
 

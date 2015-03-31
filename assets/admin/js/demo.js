@@ -79,10 +79,10 @@ jQuery(function($) {
     $('#saveMuch').click(function() {
         var invoiceid = $(this).data('invoiceid');
         var content = $('.snapshot-save').html();
-        $(this).text('saving...')
+        $(this).text('updating...')
         $.post( "http://"+window.location.host + "/invoice/"+invoiceid, {snapshot: content} )
         .done(function() {
-            $('#saveMuch').text('Save');
+            $('#saveMuch').text('Update');
         });
     });
 
@@ -100,4 +100,20 @@ jQuery(function($) {
     });
 
     $('#clientInvoice').find('.contedit').attr('contenteditable', false);
+
+    if($('#checkbox-validate')){
+        console.log($('#checkbox-validate').find('.ckbox').length);
+        $('.ckbox input[type="checkbox"][name="orders"]').change(function () {
+            if (this.checked) {
+              $(this).attr('data-pushed', 'pushed');
+              $('#geninvsub').attr('disabled', false);
+            } else {
+              $(this).attr('data-pushed', 'notpushed');
+              var pshd = $('#checkbox-validate').find('.ckbox input[data-pushed="pushed"][name="orders"]').length;
+              if(pshd == 0) {
+                $('#geninvsub').attr('disabled', true);
+              }
+            }
+        });
+    }
 });

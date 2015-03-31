@@ -29,13 +29,13 @@ module.exports = {
 		});
 	},
 	create: function(req, res, next) {
+			console.log('aaa');
 		User.create(req.params.all(), function(err, user) {
 			if (err) return next(err);
 			res.redirect('admin/user/'+user.id);
 		});
 	},
 	update: function(req, res, next) {
-			console.log('aaa');
 		User.update(req.param('id'), req.params.all(), function userUpdated (err) {
 			if (err) {
 				return res.redirect('admin/user/' + req.param('id'));

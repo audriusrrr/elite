@@ -60,6 +60,7 @@ var jsFilesToInject = [
   'global/plugins/jasny-bootstrap-fileinput/js/jasny-bootstrap.fileinput.min.js',
   'global/plugins/bootstrap-maxlength/bootstrap-maxlength.min.js',
   'global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js',
+  'global/plugins/jquery-validation/jquery.validate.js',
   'global/plugins/autosize/jquery.autosize.min.js',
   'global/plugins/underscore/underscore.js',
   'global/plugins/jstimezonedetect/jstz.min.js',

@@ -6,9 +6,9 @@
 
     "use strict";
             var options = {
-                events_source: 'http://localhost:1337/admin/events',
+                events_source: 'http://' + window.location.host + '/admin/events',
                 view: 'day',
-                tmpl_path: 'http://localhost:1337/global/plugins/bootstrap-calendar/tmpls/',
+                tmpl_path: 'http://' + window.location.host + '/global/plugins/bootstrap-calendar/tmpls/',
                 tmpl_cache: false,
                 day: 'now',
                 onAfterEventsLoad: function(events) {

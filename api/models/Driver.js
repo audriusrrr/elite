@@ -40,12 +40,15 @@ module.exports = {
     });
   },
   beforeValidate: function(values, next) {
-    console.log('before update');
-    require('bcrypt').hash(values.password, 10, function passwordEncrypted(err, encryptedPass) {
-      if (err) return next(err);
-      values.encryptedPass = encryptedPass;
+   if(values.password) {
+      require('bcrypt').hash(values.password, 10, function passwordEncrypted(err, encryptedPass) {
+        if (err) return next(err);
+        values.encryptedPass = encryptedPass;
+        next();
+      });
+    } else {
       next();
-    });
+    }
   }
 };
 

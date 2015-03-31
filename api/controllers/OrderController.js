@@ -75,7 +75,7 @@ module.exports = {
 					var alass = 'event-danger';
 				}
 				var start = events[i].ordertime * 1000;
-				var aend  = (start + 2000);
+				var aend  = (start + 20000);
 
 				var options = {
 				  'id'   : id,
